@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-nav  main-nav--closed  main-nav--no-js">
+        <div class="page-header__logo">
+          <a href="index.html">
+            <img src="http://placehold.it/100x50" width="" height="" alt="Главная">
+          </a>
+        </div>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__items">
+            <li class="main-nav__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="photo.html">Фото и видео</a>
+            </li>
+            <li class="main-nav__item  main-nav__item--active">
+              <a>Форма отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="page-intro  page-intro__hero-image">
+        <h1 class="page-intro__title">Оставьте свой отзыв</h1>
+        <p class="common-description  page-intro__description">
+          Помогите нашим отелям стать лучше! Оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещённых вами достопримечательностях
+        </p>
+      </section>
+      <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+        <fieldset class="form__section">
+          <legend class="form__title">Представьтесь:</legend>
+          <div class="form__input-pair">
+            <label class="form__label" for="user-name">Имя*:</label>
+            <input class="form__input" type="text" name="name" id="user-name" placeholder="Пётр" required>
+          </div>
+          <div class="form__input-pair">
+            <label class="form__label" for="user-surname">Фамилия*:</label>
+            <input class="form__input  form__input--small" type="text" name="surname" id="user-surname" placeholder="Иванов" required>
+          </div>
+          <div class="form__input-pair">
+            <label class="form__label" for="user-patronym">Отчество:</label>
+            <input class="form__input  form__input--small" type="text" name="patronym" id="user-patronym" placeholder="Александрович">
+          </div>
+        </fieldset>
+        <fieldset class="form__section">
+          <legend class="form__title">Контактная информация:</legend>
+          <div class="form__input-pair  form__input-pair--position-top">
+            <label class="form__label  form__label--top" for="phone-number">Контактный телефон*:</label>
+            <input class="form__input  form__input--icon  form__input--phone-icon" type="tel" name="tel" id="phone-number" placeholder="Введите телефон" required>
+            <p class="form__error">Ошибка, перепроверьте номер</p>
+          </div>
+          <div class="form__input-pair  form__input-pair--position-top">
+            <label class="form__label  form__label--top" for="e-mail">Электронная почта*:</label>
+            <input class="form__input  form__input--icon  form__input--mail-icon" type="email" name="email" id="e-mail" placeholder="Введите e-mail" required>
+          </div>
+        </fieldset>
+        <fieldset class="form__section">
+          <legend class="form__title">Ваше общее впечатление:</legend>
+          <div class="form__input-pair">
+            <input class="form__radio-btn" type="radio" name="impression" value="positive" id="impression-positive" checked>
+            <label class="form__option-label" for="impression-positive">Скорее положительное</label>
+          </div>
+          <div class="form__input-pair">
+            <input class="form__radio-btn" type="radio" name="impression" value="negative" id="impression-negative">
+            <label class="form__option-label" for="impression-negative">Скорее отрицательное</label>
+          </div>
+          <div class="form__input-pair">
+            <input class="form__radio-btn" type="radio" name="impression" value="undefined" id="impression-undefined">
+            <label class="form__option-label" for="impression-undefined">Затрудняюсь ответить</label>
+          </div>
+        </fieldset>
+        <fieldset class="form__section">
+          <legend class="form__title">Посещённые достопримечательности:</legend>
+          <div class="form__input-pair">
+            <input class="form__checkbox-btn" type="checkbox" name="sight[]" value="devil-bridge" id="devil-bridge" checked>
+            <label class="form__option-label" for="devil-bridge">Мост дьявола</label>
+          </div>
+          <div class="form__input-pair">
+            <input class="form__checkbox-btn" type="checkbox" name="sight[]" value="slide-park" id="slide-park" checked>
+            <label class="form__option-label" for="slide-park">Слайд-парк</label>
+          </div>
+          <div class="form__input-pair">
+            <input class="form__checkbox-btn" type="checkbox" name="sight[]" value="bell-mountain" id="bell-mountain">
+            <label class="form__option-label" for="bell-mountain">Гора-Колокол</label>
+          </div>
+          <div class="form__input-pair">
+            <input class="form__checkbox-btn" type="checkbox" name="sight[]" value="red-mountains" id="red-mountains" checked>
+            <label class="form__option-label" for="red-mountains">Красные скалы</label>
+          </div>
+        </fieldset>
+        <fieldset class="form__section">
+          <legend class="visially-hidden">Отзыв о путешествии</legend>
+          <div class="form__input-pair  form__input-pair--position-top">
+            <label class="form__title" for="review">Опишите свои эмоции:</label>
+            <textarea class="form__review-field" name="trip-review" id="review">Опишите подробно все свои восторги</textarea>
+          </div>
+        </fieldset>
+        <button class="btn form__submit-btn">Отправить отзыв</button>
+      </form>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a class="page-footer__hash-tag" href="#">#visitsedona</a>
+        <ul class="page-footer__social  social-block">
+          <li class="social-block__item">
+            <a class="social-block__link  social-block__link--tw" href="#">
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+          <li class="social-block__item">
+            <a class="social-block__link  social-block__link--fb" href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="social-block__item">
+            <a class="social-block__link  social-block__link--yt" href="#">
+              <span class="visually-hidden">Youtube</span>
+            </a>
+          </li>
+        </ul>
+        <p class="page-footer__copyright">
+          Разработано
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/">
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
+        </p>
+      </div>
+    </footer>
+    <div class="modal-content  modal-content__error">
+      <div class="modal-content__wrapper">
+        <b class="modal-content__title">
+          Что-то пошло не&nbsp;так!
+        </b>
+        <p class="modal-content__description">
+          Проверьте поля, выделенные красным, скорее всего вы&nbsp;забыли их&nbsp;заполнить
+        </p>
+        <button class="btn  btn--error" type="button">OK</button>
+      </div>
+    </div>
+    <div class="modal-content  modal-content__success">
+      <div class="modal-content__wrapper">
+        <b class="modal-content__title">
+          Ваш отзыв отправлен!
+        </b>
+        <p class="modal-content__description">
+          Спасибо за&nbsp;ваше участие, ваш отзыв уже поступил к&nbsp;нам. В&nbsp;ближайшее время мы&nbsp;опубликуем его на&nbsp;сайте.
+        </p>
+        <button class="btn  btn--success" type="button">Закрыть окно</button>
+      </div>
+    </div>
+  </body>
+</html>

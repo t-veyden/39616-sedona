@@ -6,7 +6,7 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav  main-nav--closed">
+      <nav class="main-nav  main-nav--closed  main-nav--no-js">
         <div class="page-header__logo">
           <a>
             <img src="http://placehold.it/100x50" width="" height="" alt="Главная">
@@ -32,92 +32,85 @@
           </ul>
         </div>
       </nav>
-      <div class="page-header__hero-image"></div>
     </header>
     <main class="container">
-      <section class="page-intro">
+      <section class="page-intro  page-intro__hero-image  page-intro__hero-image--full">
         <h1 class="page-intro__title">
-          Седона - небольшой городок в Аризоне, заслуживающий большего!
+          Седона&nbsp;&mdash; небольшой городок в&nbsp;Аризоне, заслуживающий большего!
         </h1>
-        <p class="common-description">
-          Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
+        <p class="common-description page-intro__description">
+          Рассмотрим 5&nbsp;причин, по&nbsp;которым Седона круче, чем Гранд Каньон!
         </p>
       </section>
-      <section class="advantage">
+      <section class="advantage  advantage__counter">
         <div class="advantage__wrapper">
           <h2 class="advantage__title">Настоящий городок</h2>
-          <span class="advantage__number">№1</span>
-          <p class="advantage__description">Седона не аттракцион для туристов, там течёт своя жизнь</p>
+          <p class="advantage__description">Седона не&nbsp;аттракцион для туристов, там течёт своя жизнь</p>
         </div>
-        <img src="http://placehold.it/150x150" width="" height="" alt="Местный ресторан">
-        <ul class="advantage-list">
-          <li class="advantage-list__item">
-            <b class="advantage-list__title">Жильё</b>
-            <p class="advantage-list__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+        <img class="advantage__img" src="http://placehold.it/150x150" width="" height="" alt="Местный ресторан">
+        <ul class=" advantage__list">
+          <li class="advantage__list-item  advantage__list-item--accomodation">
+            <b class="advantage__list-title">Жильё</b>
+            <p class="advantage__list-description">Рекомендуем пожить в&nbsp;настоящем мотеле, всё как в&nbsp;кино!</p>
           </li>
-          <li class="advantage-list__item">
-            <b class="advantage-list__title">Сувениры</b>
-            <p class="advantage-list__description">Не только китайского, но и местного производства!</p>
+          <li class="advantage__list-item  advantage__list-item--souvenir">
+            <b class="advantage__list-title">Сувениры</b>
+            <p class="advantage__list-description">Не&nbsp;только китайского, но&nbsp;и&nbsp;местного производства!</p>
           </li>
-          <li class="advantage-list__item">
-            <b class="advantage-list__title">Еда</b>
-            <p class="advantage-list__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          <li class="advantage__list-item  advantage__list-item--food">
+            <b class="advantage__list-title">Еда</b>
+            <p class="advantage__list-description">Всегда заказывайте фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
           </li>
         </ul>
       </section>
-      <section class="advantage">
+      <section class="advantage  advantage__counter">
         <div class="advantage__wrapper">
           <h2 class="advantage__title">Там есть мост Дьявола</h2>
-          <span class="advantage__number">№2</span>
-          <p class="advantage__description  advantage__description--black">
-            Да, по нему можно пройти! Если вы осмелитесь, конечно
+          <p class="advantage__description">
+            Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, конечно
           </p>
         </div>
-        <img src="http://placehold.it/150x150" width="" height="" alt="Мост Дьявола">
+        <img class="advantage__img" src="http://placehold.it/150x150" width="" height="" alt="Мост Дьявола">
       </section>
-      <section class="advantage  advantage--small">
-        <h2 class="advantage__title  advantage__title--black">Небольшая площадь</h2>
-        <span class="advantage__number  advantage__number--black">№3</span>
-        <p class="advantage__description  advantage__description--black">Все достопримечательности находятся очень близко</p>
+      <section class="advantage  advantage__counter  advantage--small">
+        <h2 class="advantage__title">Небольшая площадь</h2>
+        <p class="advantage__description">Все достопримечательности находятся очень близко</p>
       </section>
-      <section class="advantage  advantage--small">
-        <h2 class="advantage__title  advantage__title--black">Красивая дорога</h2>
-        <span class="advantage__number  advantage__number--black">№4</span>
-        <p class="advantage__description  advantage__description--black">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+      <section class="advantage  advantage__counter  advantage--small">
+        <h2 class="advantage__title">Красивая дорога</h2>
+        <p class="advantage__description">Ехать в&nbsp;Седону из&nbsp;Лас-Вегаса совсем не&nbsp;скучно!</p>
       </section>
-      <section class="advantage  advantage--small">
-        <h2 class="advantage__title  advantage__title--black">Мало туристов</h2>
-        <span class="advantage__number  advantage__number--black">№5</span>
-        <p class="advantage__description  advantage__description--black">Большинство едет в Гранд Каньон и толпится там</p>
+      <section class="advantage  advantage__counter  advantage--small">
+        <h2 class="advantage__title">Мало туристов</h2>
+        <p class="advantage__description">Большинство едет в&nbsp;Гранд Каньон и&nbsp;толпится там</p>
       </section>
       <section class="hotel-search">
-        <b class="common-title">Заинтересовались?</b>
-        <p class="common-description">
-          Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
-          гостиниц в Седоне
+        <b class="common-title  hotel-search__title">Заинтересовались?</b>
+        <p class="common-description  hotel-search__description">
+          Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;Седоне
         </p>
         <a class="btn" href="#">Найти гостиницу</a>
       </section>
-      <img src="http://placehold.it/150x250" width="" height="" alt="Карта расположения Седоны">
+      <div class="find-us">
+        <img class="find-us__map" src="http://placehold.it/150x250" width="" height="" alt="Карта расположения Седоны">
+      </div>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <p class="page-footer__hash-tag">
-          <a href="#">#visitsedona</a>
-        </p>
-        <ul class="page-footer__social">
-          <li>
-            <a class="social-link  social-link--tw" href="#">
+        <a class="page-footer__hash-tag" href="#">#visitsedona</a>
+        <ul class="page-footer__social  social-block">
+          <li class="social-block__item">
+            <a class="social-block__link  social-block__link--tw" href="#">
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>
-          <li>
-            <a class="social-link  social-link--fb" href="#">
+          <li class="social-block__item">
+            <a class="social-block__link  social-block__link--fb" href="#">
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
-          <li>
-            <a class="social-link  social-link--yt" href="#">
+          <li class="social-block__item">
+            <a class="social-block__link  social-block__link--yt" href="#">
               <span class="visually-hidden">Youtube</span>
             </a>
           </li>

@@ -1,0 +1,47 @@
+.btn {
+  @include btn-body;
+}
+
+.btn-real {
+  @include btn-body(280px);
+  font: {
+    size: 18px;
+    weight: bold;
+    family: "PT Sans", "Arial", sans-serif;
+  }
+  line-height: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.btn__text {
+  @include btn-text;
+}
+
+.btn--search {
+  width: 280px;
+  height: 58px;
+  margin: 0 auto;
+}
+
+.btn--search .btn__text {
+  font-size: 21px;
+  padding: 12px 40px;
+}
+
+.btn--submit {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.btn--error {
+  width: 180px;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.btn--success {
+  margin-bottom: 20px;
+}

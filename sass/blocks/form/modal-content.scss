@@ -1,0 +1,41 @@
+.modal-content {
+  @include container;
+  outline: 1px solid #333; /*provisional*/
+}
+
+.modal-content__wrapper {
+  text-align: center;
+  padding-top: 40px;
+
+}
+
+.modal-content__title {
+  @include title;
+  margin-bottom: 30px;
+}
+
+.modal-content__description {
+  line-height: 24px;
+  padding: 0 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.modal-content__success {
+  position: relative;
+}
+
+.modal-content__success::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  height: 98px;
+  background-color: $form-colour;
+  z-index: -1;
+}
+
+.modal-content__success .modal-content__description {
+  margin-bottom: 55px;
+}

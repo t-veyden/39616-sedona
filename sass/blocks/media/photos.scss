@@ -1,0 +1,23 @@
+.photos__item {
+  @include photo-text;
+  padding: 0 20px;
+  padding-bottom: 18px; /*approx*/
+}
+
+.photos__img {
+  margin-top: 20px;
+}
+
+.photos__title {
+  @include photo-text(bold, #000);
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.photos__author {
+  @include photo-text;
+  text-transform: none;
+  margin-top: 0px;
+  margin-bottom: 8px;
+}

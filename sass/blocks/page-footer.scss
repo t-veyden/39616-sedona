@@ -13,10 +13,10 @@
   font: {
     size: 21px;
     weight: bold;
-    family: "PT Sans", "Arial", sans-serif;
   }
-  line-height: 26px;
-  @include link-style;
+  line-height: 1.4;
+  color: #000;
+  text-decoration: none;
   text-transform: uppercase;
   margin-top: 40px;
   margin-bottom: 35px; /*approx*/
@@ -31,26 +31,7 @@
   margin-bottom: 30px;
 }
 
-.page-footer__copyright {
-  @include common-text(#000, 26px);
-}
-
 .page-footer__copyright-link {
-  @include link-style;
-}
-
-.social-block {
-  display: flex;
-}
-
-.social-block__item {
-  margin-right: 6px;
-}
-
-.social-block__link {
-  display: block;
-  width: 46px;
-  height: 48px;
-  @include link-style;
-  background-color: $main-blue;
+  color: #000;
+  text-decoration: none;
 }

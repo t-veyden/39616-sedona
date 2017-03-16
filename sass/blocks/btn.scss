@@ -1,23 +1,22 @@
 .btn {
-  @include btn-body;
-}
-
-.btn-real {
-  @include btn-body(280px);
-  font: {
-    size: 18px;
-    weight: bold;
-    family: "PT Sans", "Arial", sans-serif;
-  }
-  line-height: 40px;
-  color: #fff;
-  text-transform: uppercase;
-  text-decoration: none;
-  margin: 0 20px;
+  width: 320px;
+  height: 53px;
+  text-align: center;
+  background-color: $main-blue;
+  border: none;
 }
 
 .btn__text {
-  @include btn-text;
+  display: inline-block;
+  font: {
+    size: 18px;
+    weight: bold;
+  }
+  line-height: 2;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 70px 5px 70px;
 }
 
 .btn--search {
@@ -29,19 +28,4 @@
 .btn--search .btn__text {
   font-size: 21px;
   padding: 12px 40px;
-}
-
-.btn--submit {
-  font-size: 21px;
-  line-height: 26px;
-}
-
-.btn--error {
-  width: 180px;
-  margin: 0;
-  margin-bottom: 35px;
-}
-
-.btn--success {
-  margin-bottom: 20px;
 }

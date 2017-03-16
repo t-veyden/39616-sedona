@@ -64,12 +64,12 @@
         <fieldset class="form__section  form__section--contacts">
           <legend class="form__title">Контактная информация:</legend>
           <div class="form__input-pair  form__input-pair--position-top">
-            <label class="form__label  form__icon  form__icon--phone" for="phone-number">Контактный телефон*:</label>
+            <label class="form__label  form__label--icon  form__label--phone" for="phone-number">Контактный телефон*:</label>
             <input class="form__input" type="tel" name="tel" id="phone-number" placeholder="Введите телефон" required>
             <p class="form__error">Ошибка, перепроверьте номер</p>
           </div>
           <div class="form__input-pair  form__input-pair--position-top">
-            <label class="form__label  form__icon  form__icon--mail" for="e-mail">Электронная почта*:</label>
+            <label class="form__label  form__label--icon  form__label--mail" for="e-mail">Электронная почта*:</label>
             <input class="form__input" type="email" name="email" id="e-mail" placeholder="Введите e-mail" required>
           </div>
         </fieldset>
@@ -114,7 +114,7 @@
             <textarea class="form__review-field" name="trip-review" id="review">Опишите подробно все свои восторги</textarea>
           </div>
         </fieldset>
-          <button class="btn-real  btn--submit">Отправить отзыв</button>
+        <button class="btn-real  btn-real--submit" type="submit">Отправить отзыв</button>
       </form>
     </main>
     <footer class="page-footer">
@@ -145,7 +145,7 @@
         </p>
       </div>
     </footer>
-    <div class="modal-content  modal-content__error">
+    <div class="modal-content  modal-content--error">
       <div class="modal-content__wrapper">
         <b class="modal-content__title">
           Что-то пошло не&nbsp;так!
@@ -153,10 +153,10 @@
         <p class="modal-content__description">
           Проверьте поля, выделенные красным, скорее всего вы&nbsp;забыли их&nbsp;заполнить
         </p>
-        <button class="btn-real  btn--error" type="button">OK</button>
+        <button class="btn-real  btn-real--error" type="button">OK</button>
       </div>
     </div>
-    <div class="modal-content  modal-content__success">
+    <div class="modal-content  modal-content--success">
       <div class="modal-content__wrapper">
         <b class="modal-content__title">
           Ваш отзыв отправлен!
@@ -164,7 +164,7 @@
         <p class="modal-content__description">
           Спасибо за&nbsp;ваше участие, ваш отзыв уже поступил к&nbsp;нам. В&nbsp;ближайшее время мы&nbsp;опубликуем его на&nbsp;сайте.
         </p>
-        <button class="btn-real  btn--success" type="button">Закрыть окно</button>
+        <button class="btn-real  btn-real--success" type="button">Закрыть окно</button>
       </div>
     </div>
   </body>

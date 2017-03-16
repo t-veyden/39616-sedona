@@ -1,7 +1,7 @@
 .advantage {
   display: flex;
   flex-direction: column;
-  line-height: 21px;
+  line-height: 1.5;
   color: #fff;
 }
 
@@ -31,7 +31,7 @@
 .advantage--small {
   min-height: 168px;
   text-align: center;
-  line-height: 21px;
+  line-height: 1.8;
   color: #333;
   background-color: $advantage-colour;
 }
@@ -48,7 +48,12 @@
 
 .advantage__title,
 .advantage__list-title {
-  @include title(#fff);
+  font: {
+    size: 18px;
+    weight: bold;
+  }
+  line-height: 1.4;
+  color: #fff;
 }
 
 .advantage__list-title {
@@ -65,20 +70,19 @@
 .advantage__list-item {
   position: relative;
   @include list-style;
-}
-
-.advantage__list-item::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -50px;
-  width: 41px;
-  height: 42px;
-  background-color: blue; /*provisional*/
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -50px;
+    width: 41px;
+    height: 42px;
+    background-color: blue; /*provisional*/
+  }
 }
 
 .advantage__list-description {
-  line-height: 21px;
+  line-height: 1.5;
   color: #333;
   margin-bottom: 28px;
 }

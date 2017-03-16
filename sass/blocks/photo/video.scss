@@ -4,12 +4,17 @@
 
 .video__title {
   display: block;
-  @include title;
+  font: {
+    size: 18px;
+    weight: bold;
+  }
+  line-height: 1.5;
+  color: #000;
   margin-top: 35px;
 }
 
 .video__description {
-  line-height: 24px;
+  line-height: 1.7;
   margin: 24px 20px 35px 28px;
 }
 

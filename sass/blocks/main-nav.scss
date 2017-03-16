@@ -7,7 +7,11 @@
 }
 
 .main-nav__item {
-  @include btn-body(320px, 56px);
+  width: 320px;
+  height: 56px;
+  text-align: center;
+  background-color: $main-blue;
+  border: none;
 }
 
 .main-nav__nav-bar {

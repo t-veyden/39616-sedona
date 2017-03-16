@@ -6,36 +6,38 @@
 .modal-content__wrapper {
   text-align: center;
   padding-top: 40px;
-
 }
 
 .modal-content__title {
-  @include title;
+  font: {
+    size: 18px;
+    weight: bold;
+  }
+  line-height: 1.5;
+  color: #000;
   margin-bottom: 30px;
 }
 
 .modal-content__description {
-  line-height: 24px;
   padding: 0 50px;
   margin-top: 25px;
   margin-bottom: 25px;
 }
 
-.modal-content__success {
+.modal-content--success {
   position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    height: 98px;
+    background-color: $form-colour;
+    z-index: -1;
+  }
 }
 
-.modal-content__success::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 320px;
-  height: 98px;
-  background-color: $form-colour;
-  z-index: -1;
-}
-
-.modal-content__success .modal-content__description {
+.modal-content--success .modal-content__description {
   margin-bottom: 55px;
 }

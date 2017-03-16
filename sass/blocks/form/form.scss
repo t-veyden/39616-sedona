@@ -1,6 +1,7 @@
 //PADDINGS FOR A BREAKER
 .form__section {
   padding: 0 20px;
+  margin: 0;
   border: none;
   &--personal {
     padding-bottom: 8px;
@@ -18,7 +19,12 @@
 
 // TITLE
 .form__title {
-  @include title;
+  font: {
+    size: 18px;
+    weight: bold;
+  }
+  line-height: 1.5;
+  color: #000;
   text-align: center;
   padding-top: 16px;
   margin-bottom: 20px;
@@ -66,15 +72,15 @@
 .form__input {
   position: relative;
   width: 230px;
-  height: 56px;
+  height: 57px;
   font-size: 18px;
   font-weight: bold;
-  line-height: 26px;
+  line-height: 1.5;
   font-family: "PT Sans", "Arial", sans-serif;
   border: none;
   background-color: $form-colour;
   margin-bottom: 20px;
-  &::placeholder{
+  &::placeholder {
     color: #000;
     padding-left: 21px;
   }
@@ -83,19 +89,18 @@
   }
 }
 
-.form__icon {
+.form__label--icon {
   width: 222px;
-}
-
-.form__icon::before {
-  content: "";
-  position: absolute;
-  top: 34px;
-  right: -38px;
-  width: 58px;
-  height: 58px;
-  background-color: #e6e6e6;
-  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 34px;
+    right: -38px;
+    width: 57px;
+    height: 57px;
+    background-color: #e6e6e6;
+    z-index: 1;
+  }
 }
 
 .form__section--contacts .form__input:last-child {
@@ -123,7 +128,6 @@
   position: absolute;
   top: 85px;
   left: 20px;
-  font-size: 14px;
   color: $error;
   text-transform: none;
 }
@@ -137,7 +141,12 @@
 .form__radio-label,
 .form__checkbox-label {
   position: relative;
-  @include title;
+  font: {
+    size: 18px;
+    weight: bold;
+  }
+  line-height: 1.5;
+  color: #000;
   text-transform: none;
 }
 
@@ -151,28 +160,26 @@
   padding-left: 78px;
   margin-bottom: 42px; /*approx*/
   margin-left: -20px;
-}
-
-.form__radio-label::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: 0;
-  height: 54px;
-  width: 54px;
-  border-radius: 50%;
-  background-color: $form-colour;
-}
-
-.form__radio-label::after {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 17px;
-  width: 20px;
-  height: 20px;
-  background-color: #000;
-  border-radius: 50%;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 0;
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+    background-color: $form-colour;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+  }
 }
 
 // CHECKBOX TICKS
@@ -185,37 +192,40 @@
   padding-left: 78px;
   margin-left: -20px;
   margin-bottom: 55px; /*approx*/
-}
-
-.form__checkbox-label::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -2px;
-  height: 54px;
-  width: 54px;
-  border-radius: 10%;
-  background-color: $form-colour;
-}
-
-.form__checkbox-label::after {
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 14px;
-  width: 20px;
-  height: 12px;
-  border-left: 4px solid;
-  border-bottom: 4px solid;
-  transform: rotate(-45deg);
-  border-radius: 10%;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -2px;
+    height: 54px;
+    width: 54px;
+    border-radius: 10%;
+    background-color: $form-colour;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 14px;
+    width: 20px;
+    height: 12px;
+    border-left: 4px solid;
+    border-bottom: 4px solid;
+    transform: rotate(-45deg);
+    border-radius: 10%;
+  }
 }
 
 // TEXTAREA
 .form__review-field {
+  box-sizing: content-box;
   width: 248px;
   height: 130px;
-  @include title;
+  font: {
+    size: 18px;
+    weight: bold;
+  }
+  line-height: 1.5;
   font-family: "PT Sans", "Arial", sans-serif;
   border: none;
   background-color: $form-colour;

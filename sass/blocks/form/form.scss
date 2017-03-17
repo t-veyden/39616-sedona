@@ -76,7 +76,7 @@
   font-size: 18px;
   font-weight: bold;
   line-height: 1.5;
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: inherit;
   border: none;
   background-color: $form-colour;
   margin-bottom: 20px;
@@ -226,7 +226,7 @@
     weight: bold;
   }
   line-height: 1.5;
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: inherit;
   border: none;
   background-color: $form-colour;
   padding: 15px;

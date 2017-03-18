@@ -1,0 +1,16 @@
+.social-block {
+  display: flex;
+}
+
+.social-block__item {
+  margin-right: 6px;
+}
+
+.social-block__link {
+  display: block;
+  width: 46px;
+  height: 48px;
+  color: #000;
+  text-decoration: none;
+  background-color: $main-blue;
+}

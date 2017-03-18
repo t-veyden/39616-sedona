@@ -1,0 +1,26 @@
+.main-nav {
+  @include container;
+}
+
+.main-nav__items {
+  @include list-style;
+}
+
+.main-nav__item {
+  width: 320px;
+  height: 56px;
+  text-align: center;
+  background-color: $main-blue;
+  border: none;
+}
+
+.main-nav__nav-bar {
+  display: flex;
+  justify-content: space-around;
+  width: 320px;
+}
+
+.main-nav__toggle {
+  width: 23px;
+  height: 21px;
+}

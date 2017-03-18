@@ -1,0 +1,233 @@
+//PADDINGS FOR A BREAKER
+.form__section {
+  padding: 0 20px;
+  margin: 0;
+  border: none;
+  &--personal {
+    padding-bottom: 8px;
+  }
+  &--contacts {
+    padding-bottom: 9px;
+  }
+  &--radio {
+    padding-bottom: 3px;
+  }
+  &--checkboxes {
+    padding-bottom: 40px;
+  }
+}
+
+// TITLE
+.form__title {
+  font: {
+    size: 18px;
+    weight: bold;
+  }
+  line-height: 1.5;
+  color: #000;
+  text-align: center;
+  padding-top: 16px;
+  margin-bottom: 20px;
+}
+
+.form__section--radio .form__title {
+  padding-top: 19px;
+  margin-bottom: 38px;
+}
+
+.form__section--checkboxes .form__title {
+  padding-top: 19px;
+  margin-bottom: 30px;
+}
+
+// INPUT PAIR POSITIONING
+.form__input-pair {
+  display: flex;
+  &--left {
+    justify-content: space-between;
+    align-items: center;
+  }
+  &--position-top {
+    flex-direction: column;
+    position: relative; /*privisional*/
+    margin-bottom: 20px;
+  }
+}
+
+// LABEL
+.form__label {
+  position: relative;
+}
+
+.form__input-pair--left .form__label {
+  padding-bottom: 16px;
+}
+
+.form__input-pair--position-top .form__label {
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
+
+// INPUT
+.form__input {
+  position: relative;
+  width: 230px;
+  height: 57px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.5;
+  font-family: inherit;
+  border: none;
+  background-color: $form-colour;
+  margin-bottom: 20px;
+  &::placeholder {
+    color: #000;
+    padding-left: 21px;
+  }
+  &--small {
+    width: 191px;
+  }
+}
+
+.form__label--icon {
+  width: 222px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 34px;
+    right: -38px;
+    width: 57px;
+    height: 57px;
+    background-color: #e6e6e6;
+    z-index: 1;
+  }
+}
+
+.form__section--contacts .form__input:last-child {
+  margin-bottom: 0;
+}
+
+.form__section--checkboxes .form__input:last-child {
+  margin-bottom: 0;
+}
+
+.form__section--radio .form__input:last-child {
+  margin-bottom: 0;
+}
+
+.form__input-pair:last-child .form__checkbox-label {
+  margin-bottom: 0;
+}
+
+.form__section:last-of-type {
+  margin-bottom: 32px;
+}
+
+/*provisional*/
+.form__error {
+  position: absolute;
+  top: 85px;
+  left: 20px;
+  color: $error;
+  text-transform: none;
+}
+
+/*provisional*/
+.form__section .visually-hidden {
+  position: absolute;
+  left: 400px;
+}
+
+.form__radio-label,
+.form__checkbox-label {
+  position: relative;
+  font: {
+    size: 18px;
+    weight: bold;
+  }
+  line-height: 1.5;
+  color: #000;
+  text-transform: none;
+}
+
+// RADIO TICKS
+.form__radio-btn {
+  opacity: 0;
+}
+
+.form__radio-label {
+  position: relative;
+  padding-left: 78px;
+  margin-bottom: 42px; /*approx*/
+  margin-left: -20px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 0;
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+    background-color: $form-colour;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+  }
+}
+
+// CHECKBOX TICKS
+.form__checkbox-btn {
+  opacity: 0;
+}
+
+.form__checkbox-label {
+  position: relative;
+  padding-left: 78px;
+  margin-left: -20px;
+  margin-bottom: 55px; /*approx*/
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -2px;
+    height: 54px;
+    width: 54px;
+    border-radius: 10%;
+    background-color: $form-colour;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 14px;
+    width: 20px;
+    height: 12px;
+    border-left: 4px solid;
+    border-bottom: 4px solid;
+    transform: rotate(-45deg);
+    border-radius: 10%;
+  }
+}
+
+// TEXTAREA
+.form__review-field {
+  box-sizing: content-box;
+  width: 248px;
+  height: 130px;
+  font: {
+    size: 18px;
+    weight: bold;
+  }
+  line-height: 1.5;
+  font-family: inherit;
+  border: none;
+  background-color: $form-colour;
+  padding: 15px;
+}

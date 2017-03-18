@@ -1,0 +1,20 @@
+.hotel-search {
+  text-align: center;
+}
+
+.hotel-search__title {
+  font: {
+    size: 21px;
+    weight: bold;
+  }
+  line-height: 1.4;
+  display: block;
+  margin-top: 28px;
+  margin-bottom: 18px;
+}
+
+.hotel-search__description {
+  line-height: 1.8;
+  padding: 0 20px;
+  margin-bottom: 34px;
+}

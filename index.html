@@ -3,52 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="main-page">
     <header class="page-header">
       <nav class="main-nav  main-nav--closed  main-nav--no-js">
-        <div class="page-header__logo">
-          <a>
-            <img src="http://placehold.it/100x50" width="" height="" alt="Главная">
-          </a>
-        </div>
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+
         <div class="main-nav__wrapper">
           <ul class="main-nav__items">
             <li class="main-nav__item  main-nav__item--active">
-              <a>Главная</a>
+              <a class="btn__text">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="photo.html">Фото и видео</a>
+              <a class="btn__text" href="photo.html">Фото и видео</a>
             </li>
             <li class="main-nav__item">
-              <a href="form.html">Форма отзыва</a>
+              <a class="btn__text" href="form.html">Форма отзыва</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">HTML Academy</a>
+              <a class="btn__text" href="#">HTML Academy</a>
             </li>
           </ul>
+        </div>
+        <div class="main-nav__nav-bar">
+          <div class="page-header__logo">
+            <a>
+              <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Главная">
+            </a>
+          </div>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
         </div>
       </nav>
     </header>
     <main class="container">
-      <section class="page-intro  page-intro__hero-image  page-intro__hero-image--full">
-        <h1 class="page-intro__title">
-          Седона&nbsp;&mdash; небольшой городок в&nbsp;Аризоне, заслуживающий большего!
+      <div class="hero-image  hero-image--full"></div>
+      <section class="page-intro">
+        <h1 class="page-intro__title  page-intro__title--main">
+          Седона&nbsp;&mdash; небольшой<br> городок в&nbsp;Аризоне,<br> заслуживающий большего!
         </h1>
-        <p class="common-description page-intro__description">
+        <p class="page-intro__description">
           Рассмотрим 5&nbsp;причин, по&nbsp;которым Седона круче, чем Гранд Каньон!
         </p>
       </section>
-      <section class="advantage  advantage__counter">
+      <section class="advantage">
         <div class="advantage__wrapper">
           <h2 class="advantage__title">Настоящий городок</h2>
           <p class="advantage__description">Седона не&nbsp;аттракцион для туристов, там течёт своя жизнь</p>
         </div>
-        <img class="advantage__img" src="http://placehold.it/150x150" width="" height="" alt="Местный ресторан">
-        <ul class=" advantage__list">
+        <img class="advantage__img"  src="img/photo-city@1x.jpg" width="320" height="260" alt="Местный ресторан">
+        <ul class="advantage__list">
           <li class="advantage__list-item  advantage__list-item--accomodation">
             <b class="advantage__list-title">Жильё</b>
             <p class="advantage__list-description">Рекомендуем пожить в&nbsp;настоящем мотеле, всё как в&nbsp;кино!</p>
@@ -63,41 +68,43 @@
           </li>
         </ul>
       </section>
-      <section class="advantage  advantage__counter">
-        <div class="advantage__wrapper">
+      <section class="advantage">
+        <div class="advantage__wrapper  advantage__wrapper--small">
           <h2 class="advantage__title">Там есть мост Дьявола</h2>
           <p class="advantage__description">
             Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, конечно
           </p>
         </div>
-        <img class="advantage__img" src="http://placehold.it/150x150" width="" height="" alt="Мост Дьявола">
+        <img class="advantage__img" src="img/photo-bridge@1x.jpg" width="320" height="260" alt="Мост Дьявола">
       </section>
-      <section class="advantage  advantage__counter  advantage--small">
+      <section class="advantage  advantage--small">
         <h2 class="advantage__title">Небольшая площадь</h2>
         <p class="advantage__description">Все достопримечательности находятся очень близко</p>
       </section>
-      <section class="advantage  advantage__counter  advantage--small">
+      <section class="advantage  advantage--small">
         <h2 class="advantage__title">Красивая дорога</h2>
         <p class="advantage__description">Ехать в&nbsp;Седону из&nbsp;Лас-Вегаса совсем не&nbsp;скучно!</p>
       </section>
-      <section class="advantage  advantage__counter  advantage--small">
+      <section class="advantage  advantage--small">
         <h2 class="advantage__title">Мало туристов</h2>
         <p class="advantage__description">Большинство едет в&nbsp;Гранд Каньон и&nbsp;толпится там</p>
       </section>
       <section class="hotel-search">
-        <b class="common-title  hotel-search__title">Заинтересовались?</b>
-        <p class="common-description  hotel-search__description">
+        <b class="hotel-search__title">Заинтересовались?</b>
+        <p class="hotel-search__description">
           Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;Седоне
         </p>
-        <a class="btn" href="#">Найти гостиницу</a>
+        <div class="btn  btn--search">
+          <a class="btn__text" href="#">Найти гостиницу</a>
+        </div>
       </section>
       <div class="find-us">
-        <img class="find-us__map" src="http://placehold.it/150x250" width="" height="" alt="Карта расположения Седоны">
+        <img class="find-us__map" src="img/bg-map-mobile@1x.jpg" width="320" height="350" alt="Карта расположения Седоны">
       </div>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__hash-tag" href="#">#visitsedona</a>
+        <a class="page-footer__hash-tag  page-footer__hash-tag--main" href="#">#visitsedona</a>
         <ul class="page-footer__social  social-block">
           <li class="social-block__item">
             <a class="social-block__link  social-block__link--tw" href="#">

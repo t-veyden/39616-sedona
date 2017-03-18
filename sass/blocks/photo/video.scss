@@ -1,0 +1,42 @@
+.video {
+  text-align: center;
+}
+
+.video__title {
+  display: block;
+  font: {
+    size: 18px;
+    weight: bold;
+  }
+  line-height: 1.5;
+  color: #000;
+  margin-top: 35px;
+}
+
+.video__description {
+  line-height: 1.7;
+  margin: 24px 20px 35px 28px;
+}
+
+.video__container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.video__progress-bar {
+  position: absolute;
+  top: 155px;
+  width: 280px;
+  height: 45px;
+  background-color: #000;
+  opacity: 0.6;
+  margin: 0 20px;
+}
+
+.video__controls {
+  width: 280px;
+  height: 66px;
+  margin: 0 20px;
+  background-color: #f2f2f2;
+}

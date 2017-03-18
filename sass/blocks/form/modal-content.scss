@@ -1,0 +1,43 @@
+.modal-content {
+  @include container;
+  outline: 1px solid #333; /*provisional*/
+}
+
+.modal-content__wrapper {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.modal-content__title {
+  font: {
+    size: 18px;
+    weight: bold;
+  }
+  line-height: 1.5;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.modal-content__description {
+  padding: 0 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.modal-content--success {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    height: 98px;
+    background-color: $form-colour;
+    z-index: -1;
+  }
+}
+
+.modal-content--success .modal-content__description {
+  margin-bottom: 55px;
+}

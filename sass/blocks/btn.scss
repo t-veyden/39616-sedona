@@ -1,0 +1,31 @@
+.btn {
+  width: 320px;
+  height: 53px;
+  text-align: center;
+  background-color: $main-blue;
+  border: none;
+}
+
+.btn__text {
+  display: inline-block;
+  font: {
+    size: 18px;
+    weight: bold;
+  }
+  line-height: 2;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 70px 5px 70px;
+}
+
+.btn--search {
+  width: 280px;
+  height: 58px;
+  margin: 0 auto;
+}
+
+.btn--search .btn__text {
+  font-size: 21px;
+  padding: 12px 40px;
+}

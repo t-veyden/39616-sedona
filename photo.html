@@ -37,7 +37,9 @@
       </nav>
     </header>
     <main class="container">
-      <div class="hero-image"></div>
+      <div class="hero-image">
+        <div class="hero-image__triangle"></div>
+      </div>
       <section class="page-intro">
         <h1 class="page-intro__title">Фото и видео</h1>
         <p class="page-intro__description  page-intro__description--photo">
@@ -46,47 +48,47 @@
       </section>
       <section class="photos">
         <article class="photos__item  photo">
-          <img class="photos__img" src="img/photo-1-mobile@1x.jpg" width="280" height="280" alt="Дорога, уходящая в закат">
-          <h2 class="photos__title">Неродные просторы</h2>
-          <p class="photos__author">Автор фото: Борис</p>
-          <footer class="photos__social-btn">
-            <button class="photos__like" type="button">
+          <img class="photo__img" src="img/photo-1-mobile@1x.jpg" width="280" height="280" alt="Дорога, уходящая в закат">
+          <h2 class="photo__title">Неродные просторы</h2>
+          <p class="photo__author">Автор фото: Борис</p>
+          <footer class="photo__social-btn">
+            <button class="photo__like" type="button">
               <span class="visually-hidden">Like</span>
             </button>
-            <span class="photos__likes-counter">1350<span class="visually-hidden"> likes</span></span>
+            <span class="photo__likes-counter">1350<span class="visually-hidden"> likes</span></span>
           </footer>
         </article>
         <article class="photos__item  photo">
-          <img class="photos__img" src="img/photo-2-mobile@1x.jpg" width="280" height="280" alt="Астролябия золотистая на фоне скал">
-          <h2 class="photos__title">Местная растительность</h2>
-          <p class="photos__author">Автор фото: Сергей</p>
-          <footer class="photos__social-btn">
-            <button class="photos__like" type="button">
+          <img class="photo__img" src="img/photo-2-mobile@1x.jpg" width="280" height="280" alt="Астролябия золотистая на фоне скал">
+          <h2 class="photo__title">Местная растительность</h2>
+          <p class="photo__author">Автор фото: Сергей</p>
+          <footer class="photo__social-btn">
+            <button class="photo__like" type="button">
               <span class="visually-hidden">Like</span>
             </button>
-            <span class="photos__likes-counter">143<span class="visually-hidden"> likes</span></span>
+            <span class="photo__likes-counter">143<span class="visually-hidden"> likes</span></span>
           </footer>
         </article>
         <article class="photos__item  photo">
-          <img class="photos__img" src="img/photo-3-mobile@1x.jpg" width="280" height="280" alt="Горная дорога">
-          <h2 class="photos__title">Дорога на север</h2>
-          <p class="photos__author">Автор фото: Пётр</p>
-          <footer class="photos__social-btn">
-            <button class="photos__like" type="button">
+          <img class="photo__img" src="img/photo-3-mobile@1x.jpg" width="280" height="280" alt="Горная дорога">
+          <h2 class="photo__title">Дорога на север</h2>
+          <p class="photo__author">Автор фото: Пётр</p>
+          <footer class="photo__social-btn">
+            <button class="photo__like" type="button">
               <span class="visually-hidden">Like</span>
             </button>
-            <span class="photos__likes-counter">96<span class="visually-hidden"> likes</span></span>
+            <span class="photo__likes-counter">96<span class="visually-hidden"> likes</span></span>
           </footer>
         </article>
         <article class="photos__item  photo">
-          <img class="photos__img" src="img/photo-4-mobile@1x.jpg" width="280" height="280" alt="Мост Дьявола">
-          <h2 class="photos__title">Мост Дьявола</h2>
-          <p class="photos__author">Автор фото: Антон</p>
-          <footer class="photos__social-btn">
-            <button class="photos__like" type="button">
+          <img class="photo__img" src="img/photo-4-mobile@1x.jpg" width="280" height="280" alt="Мост Дьявола">
+          <h2 class="photo__title">Мост Дьявола</h2>
+          <p class="photo__author">Автор фото: Антон</p>
+          <footer class="photo__social-btn">
+            <button class="photo__like" type="button">
               <span class="visually-hidden">Like</span>
             </button>
-            <span class="photos__likes-counter">254<span class="visually-hidden"> likes</span></span>
+            <span class="photo__likes-counter">254<span class="visually-hidden"> likes</span></span>
           </footer>
         </article>
       </section>
@@ -102,7 +104,11 @@
             <source src="#" type="video/webm">
           </video>
           <div class="video__progress-bar">
-            <input class="video__progress-bar-input" type="range" value="0">
+            <input class="video__range" type="range" value="0">
+          </div>
+          <div class="video__range-plug">
+            <div class="video__bar"></div>
+            <div class="video__toggle"></div>
           </div>
           <div class="video__controls">
             <button class="video__btn  video__btn--repeat" type="button">

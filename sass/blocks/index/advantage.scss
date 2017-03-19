@@ -6,7 +6,7 @@
 }
 
 .advantage__wrapper {
-  min-height: 207px;
+  min-height: 209px;
   text-align: center;
   background-color: $main-blue;
   &--small {
@@ -14,26 +14,63 @@
   }
 }
 
+.advantage__wrapper--triangle {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -21px;
+    left: 0;
+    width: 320px;
+    height: 37px;
+    background: url("../img/bg-triangle-small.png") no-repeat;
+  }
+ }
+
 .advantage__title {
+  position: relative;
   padding-bottom: 28px;
   margin-top: 55px;
-  margin-bottom: 16px;
+  margin-bottom: 19px;
+  &::after {
+    content: "— №" counter(number) " —";
+    counter-increment: number;
+    position: absolute;
+    bottom: -3px;
+    left: 134px;
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
+
+.advantage__wrapper--small .advantage__title {
+  margin-top: 39px;
 }
 
 .advantage__description {
   padding: 0 20px;
 }
 
-.advantage__wrapper--small .advantage__title {
-  margin-top: 40px;
-}
-
 .advantage--small {
+  position: relative;
   min-height: 168px;
   text-align: center;
-  line-height: 1.8;
+  line-height: 1.6;
   color: #333;
   background-color: $advantage-colour;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 280px;
+    height: 1px;
+    background-color: $divider-dark;
+  }
+}
+
+.advantage--small:nth-last-of-type(2)::after {
+  display: none;
 }
 
 .advantage--small .advantage__title {
@@ -64,25 +101,51 @@
   @include list-style;
   padding-left: 50px;
   padding-right: 15px;
-  margin: 35px 20px 9px 20px ; /*approx*/
+  margin: 35px 20px 8px 20px;
 }
 
 .advantage__list-item {
   position: relative;
   @include list-style;
+}
+
+.advantage__list-item {
   &::before {
     content: "";
     position: absolute;
+  }
+  &--accomodation::before {
     top: -10px;
     left: -50px;
-    width: 41px;
-    height: 42px;
-    background-color: blue; /*provisional*/
+    width: 39px;
+    height: 37px;
+    background: url("../img/icon-house.svg") no-repeat;
+    background-size: cover;
+    fill: blue;
+  }
+  &--souvenir::before {
+    top: -11px;
+    left: -46px;
+    width: 32px;
+    height: 38px;
+    background: url("../img/icon-gift.svg") no-repeat;
+    background-size: cover;
+    fill: blue;
+  }
+  &--food::before {
+    top: -5px;
+    left: -52px;
+    width: 40px;
+    height: 35px;
+    background: url("../img/icon-burger.svg") no-repeat;
+    background-size: cover;
+    fill: blue;
   }
 }
 
 .advantage__list-description {
   line-height: 1.5;
   color: #333;
+  margin-top: 15px;
   margin-bottom: 28px;
 }

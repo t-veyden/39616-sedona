@@ -1,0 +1,33 @@
+.photo__img {
+  margin-top: 23px;
+}
+
+.photo__title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+.photo__author {
+  line-height: 1.5;
+  text-transform: none;
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+.photo__like {
+  width: 23px;
+  height: 21px;
+  border: none;
+  background: url("../img/icon-like.svg") no-repeat;
+  opacity: 0.3;
+}
+
+.photo__likes-counter {
+  font-weight: bold;
+  margin-left: 10px;
+  line-height: 1.5;
+}

@@ -1,22 +1,14 @@
 .photos__item {
+  position: relative;
   padding: 0 20px;
-  padding-bottom: 18px; /*approx*/
-}
-
-.photos__img {
-  margin-top: 20px;
-}
-
-.photos__title {
-  font-weight: bold;
-  color: #000;
-  text-transform: uppercase;
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-
-.photos__author {
-  text-transform: none;
-  margin-top: 0px;
-  margin-bottom: 8px;
+  padding-bottom: 15px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    height: 1px;
+    background-color: $divider;
+  }
 }

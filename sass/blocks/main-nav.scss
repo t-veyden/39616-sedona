@@ -15,12 +15,20 @@
 }
 
 .main-nav__nav-bar {
+  position: relative;
   display: flex;
   justify-content: space-around;
   width: 320px;
 }
 
 .main-nav__toggle {
+  position: absolute;
+  top: 16px;
+  right: 19px;
   width: 23px;
   height: 21px;
+  border: none;
+  background: url("../img/icon-menu.svg") no-repeat;
+  background-size: contain;
+  // align-self: center;
 }

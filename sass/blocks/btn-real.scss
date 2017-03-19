@@ -13,15 +13,20 @@
   color: #fff;
   text-transform: uppercase;
   margin: 0 20px;
+  padding: 0;
   &--submit {
+    height: 57px;
     font-size: 21px;
   }
-  &-error {
+  &--error {
     width: 180px;
+    height: 57px;
     margin: 0;
     margin-bottom: 35px;
   }
   &--success {
+    height: 56px;
+    margin-top: 20px;
     margin-bottom: 20px;
   }
 }

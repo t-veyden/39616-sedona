@@ -1,5 +1,5 @@
-.photo__img {
-  margin-top: 23px;
+.photo {
+  padding-top: 23px;
 }
 
 .photo__title {
@@ -22,7 +22,7 @@
   width: 23px;
   height: 21px;
   border: none;
-  background: url("../img/icon-like.svg") no-repeat;
+  background: url("../img/icon-like.svg") no-repeat center;
   opacity: 0.3;
 }
 

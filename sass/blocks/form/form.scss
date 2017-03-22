@@ -8,7 +8,7 @@
     padding-bottom: 6px;
   }
   &--contacts {
-    padding-bottom: 12px;
+    padding-bottom: 8px;
   }
   &--radio {
     padding-bottom: 3px;
@@ -76,6 +76,10 @@
   }
 }
 
+.form__input-pair--position-top:last-child {
+  margin-bottom: 0;
+}
+
 // LABEL
 .form__label {
   position: relative;
@@ -90,13 +94,14 @@
   margin-bottom: 7px;
 }
 
-.form__label--icon {
+.form__icon {
   width: 222px;
+  position: relative;
   &::before {
     content: "";
     position: absolute;
-    top: 33px;
-    right: -35px;
+    top: 1px;
+    right: -58px;
     width: 57px;
     height: 57px;
     background-color: #e6e6e6;
@@ -109,18 +114,18 @@
   }
 }
 
-.form__label {
+.form__icon {
   &--phone::after {
-    top: 54px;
-    right: -18px;
+    top: 21px;
+    right: -38px;
     width: 18px;
     height: 18px;
     background: url("../img/icon-phone.svg") no-repeat;
     background-size: cover;
   }
   &--mail::after {
-    top: 55px;
-    right: -15px;
+    top: 23px;
+    right: -38px;
     width: 16px;
     height: 14px;
     background: url("../img/icon-mail.svg") no-repeat;
@@ -140,21 +145,35 @@
   border: none;
   background-color: $form-colour;
   margin-bottom: 22px;
+  padding-left: 21px;
   &::placeholder {
     color: #000;
-    padding-left: 21px;
   }
   &--small {
     width: 191px;
   }
 }
 
-.form__section--contacts .form__input:last-child {
+.form__input-pair--position-top .form__input {
+  box-sizing: content-box;
+  width: 203px;
+  padding-right: 56px;
+}
+
+.form__section--contacts:last-child {
   margin-bottom: 0;
+}
+
+.form__section--contacts .form__input {
+  margin-bottom: 23px;
 }
 
 .form__section--checkboxes .form__input:last-child {
   margin-bottom: 0;
+}
+
+.form__section--checkboxes .form__title {
+  margin-bottom: 4px;
 }
 
 .form__section--radio .form__input:last-child {
@@ -164,10 +183,6 @@
 .form__input-pair:last-child .form__checkbox-label {
   margin-bottom: 0;
 }
-
-// .form__section:last-of-type {
-//   margin-bottom: 32px;
-// }
 
 /*provisional*/
 .form__error {
@@ -231,7 +246,8 @@
   position: relative;
   padding-left: 79px;
   margin-left: -20px;
-  margin-bottom: 52px;
+  margin-top: 26px;
+  margin-bottom: 26px;
   &::before {
     content: "";
     position: absolute;
@@ -249,7 +265,7 @@
     left: 17px;
     width: 24px;
     height: 16px;
-    background: url("../img/icon-tick.svg") no-repeat;
+    background: url("../img/icon-tick.svg") no-repeat center;
   }
 }
 

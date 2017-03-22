@@ -1,5 +1,4 @@
 .container {
   @include container;
-  counter-reset: number;
   outline: 1px solid #333; /*provisional*/
 }

@@ -6,11 +6,11 @@
 }
 
 .advantage__wrapper {
-  min-height: 209px;
+  // min-height: 209px;
   text-align: center;
   background-color: $main-blue;
   &--small {
-    min-height: 191px;
+    // min-height: 191px;
   }
 }
 
@@ -32,10 +32,10 @@
   padding-bottom: 28px;
   margin-top: 55px;
   margin-bottom: 19px;
-  &::after {
+  &:not(.advantage__title--list)::after {
     content: "— №" counter(number) " —";
     counter-increment: number;
-    position: absolute;
+    position: absolute; //why then not to keep it in html
     bottom: -3px;
     left: 134px;
     font-size: 14px;
@@ -49,6 +49,7 @@
 
 .advantage__description {
   padding: 0 20px;
+  margin-bottom: 39px;
 }
 
 .advantage--small {
@@ -69,8 +70,8 @@
   }
 }
 
-.advantage--small:nth-last-of-type(2)::after {
-  display: none;
+.advantage--small:last-of-type::after {
+    display: none;
 }
 
 .advantage--small .advantage__title {
@@ -81,27 +82,30 @@
 
 .advantage--small .advantage__description {
   padding: 0 35px;
+  margin-bottom: 21px;
 }
 
-.advantage__title,
-.advantage__list-title {
+.advantage__title {
   font: {
     size: 18px;
     weight: bold;
   }
   line-height: 1.4;
   color: #fff;
+  &--list {
+    color: #000;
+  }
 }
 
-.advantage__list-title {
-  color: #000;
-}
+// .advantage__list-title {
+//   color: #000;
+// }
 
 .advantage__list {
   @include list-style;
-  padding-left: 50px;
-  padding-right: 15px;
-  margin: 35px 20px 8px 20px;
+  padding-left: 70px;
+  padding-right: 35px;
+  margin: 35px 0 8px 0;
 }
 
 .advantage__list-item {
@@ -148,4 +152,9 @@
   color: #333;
   margin-top: 15px;
   margin-bottom: 28px;
+}
+
+// for now
+.advantage-counter {
+  counter-reset: number;
 }

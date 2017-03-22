@@ -2,13 +2,5 @@
   position: relative;
   padding: 0 20px;
   padding-bottom: 15px;
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 320px;
-    height: 1px;
-    background-color: $divider;
-  }
+  border-bottom: 1px solid $divider;
 }

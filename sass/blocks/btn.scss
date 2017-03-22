@@ -1,31 +1,32 @@
 .btn {
-  width: 320px;
+  width: 280px;
   height: 53px;
   text-align: center;
   background-color: $main-blue;
   border: none;
-}
-
-.btn__text {
-  display: inline-block;
   font: {
     size: 18px;
     weight: bold;
+    family: inherit;
   }
   line-height: 2;
-  text-transform: uppercase;
-  text-decoration: none;
   color: #fff;
-  padding: 10px 70px 5px 70px;
-}
-
-.btn--search {
-  width: 280px;
-  height: 58px;
-  margin: 0 auto;
-}
-
-.btn--search .btn__text {
-  font-size: 21px;
-  padding: 9px 40px 3px 40px;
+  text-transform: uppercase;
+  margin: 0 20px;
+  padding: 0;
+  &--submit {
+    height: 57px;
+    font-size: 21px;
+  }
+  &--error {
+    width: 180px;
+    height: 57px;
+    margin: 0;
+    margin-bottom: 35px;
+  }
+  &--success {
+    height: 56px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }

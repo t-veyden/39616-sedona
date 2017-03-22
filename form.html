@@ -11,16 +11,16 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__items">
             <li class="main-nav__item">
-              <a class="btn__text" href="index.html">Главная</a>
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a class="btn__text" href="photo.html">Фото и видео</a>
+              <a class="main-nav__link" href="photo.html">Фото и видео</a>
             </li>
             <li class="main-nav__item  main-nav__item--active">
-              <a class="btn__text">Форма отзыва</a>
+              <a class="main-nav__link">Форма отзыва</a>
             </li>
             <li class="main-nav__item">
-              <a class="btn__text" href="#">HTML Academy</a>
+              <a class="main-nav__link" href="#">HTML Academy</a>
             </li>
           </ul>
         </div>
@@ -65,13 +65,17 @@
         <fieldset class="form__section  form__section--contacts">
           <legend class="form__title">Контактная информация:</legend>
           <div class="form__input-pair  form__input-pair--position-top">
-            <label class="form__label  form__label--icon  form__label--phone" for="phone-number">Контактный телефон*:</label>
-            <input class="form__input" type="tel" name="tel" id="phone-number" placeholder="Введите телефон" required>
+            <label class="form__label" for="phone-number">Контактный телефон*:</label> <!--form__label.icon  form__label.phone-->
+            <div class="form__icon  form__icon--phone">
+              <input class="form__input" type="tel" name="tel" id="phone-number" placeholder="Введите телефон" required>
+            </div>
             <p class="form__error">Ошибка, перепроверьте номер</p>
           </div>
           <div class="form__input-pair  form__input-pair--position-top">
-            <label class="form__label  form__label--icon  form__label--mail" for="e-mail">Электронная почта*:</label>
-            <input class="form__input" type="email" name="email" id="e-mail" placeholder="Введите e-mail" required>
+            <label class="form__label" for="e-mail">Электронная почта*:</label> <!--form__label.icon  form__label.mail-->
+            <div class="form__icon form__icon--mail">
+              <input class="form__input" type="email" name="email" id="e-mail" placeholder="Введите e-mail" required>
+            </div>
           </div>
         </fieldset>
         <fieldset class="form__section  form__section--radio">
@@ -115,7 +119,7 @@
             <textarea class="form__review-field" name="trip-review" id="review">Опишите подробно все свои восторги</textarea>
           </div>
         </fieldset>
-        <button class="btn-real  btn-real--submit" type="submit">Отправить отзыв</button>
+        <button class="btn  btn--submit" type="submit">Отправить отзыв</button>
       </form>
     </main>
     <footer class="page-footer">
@@ -154,7 +158,7 @@
         <p class="modal-content__description">
           Проверьте поля, выделенные красным, скорее всего вы&nbsp;забыли их&nbsp;заполнить
         </p>
-        <button class="btn-real  btn-real--error" type="button">OK</button>
+        <button class="btn  btn--error" type="button">OK</button>
       </div>
     </div>
     <div class="modal-content  modal-content--success">
@@ -165,7 +169,7 @@
         <p class="modal-content__description">
           Спасибо за&nbsp;ваше участие, ваш отзыв уже поступил к&nbsp;нам. В&nbsp;ближайшее время мы&nbsp;опубликуем его на&nbsp;сайте.
         </p>
-        <button class="btn-real  btn-real--success" type="button">Закрыть окно</button>
+        <button class="btn  btn--success" type="button">Закрыть окно</button>
       </div>
     </div>
   </body>

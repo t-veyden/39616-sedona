@@ -1,22 +1,6 @@
 .photos__item {
+  position: relative;
   padding: 0 20px;
-  padding-bottom: 18px; /*approx*/
-}
-
-.photos__img {
-  margin-top: 20px;
-}
-
-.photos__title {
-  font-weight: bold;
-  color: #000;
-  text-transform: uppercase;
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-
-.photos__author {
-  text-transform: none;
-  margin-top: 0px;
-  margin-bottom: 8px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $divider;
 }

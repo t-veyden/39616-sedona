@@ -9,12 +9,33 @@
   }
   line-height: 1.4;
   display: block;
-  margin-top: 28px;
+  margin-top: 26px;
   margin-bottom: 18px;
 }
 
 .hotel-search__description {
-  line-height: 1.8;
+  line-height: 1.75;
   padding: 0 20px;
   margin-bottom: 34px;
+}
+
+.hotel-search__btn {
+  width: 280px;
+  height: 58px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: $main-blue;
+}
+
+.hotel-search__btn a {
+  display: inline-block;
+  font: {
+    size: 21px;
+    weight: bold;
+  }
+  line-height: 2;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  padding: 9px 40px 3px 40px;
 }

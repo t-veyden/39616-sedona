@@ -19,9 +19,10 @@
 }
 
 .modal-content__description {
+  line-height: 1.75;
   padding: 0 50px;
   margin-top: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
 .modal-content--success {
@@ -39,5 +40,5 @@
 }
 
 .modal-content--success .modal-content__description {
-  margin-bottom: 55px;
+  margin-bottom: 35px;
 }

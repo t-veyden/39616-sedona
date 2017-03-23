@@ -4,9 +4,51 @@
   width: 320px;
   height: 158px;
   background: url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 100%;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 51px;
+    right: 44px;
+    width: 232px;
+    height: 39px;
+    background: url("../img/text-sedona.svg") no-repeat;
+    background-size: cover;
+  }
 }
 
 .hero-image--full {
   height: 389px;
   background-position: 50% 50%;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 90px;
+    right: 19px;
+    width: 282px;
+    height: 214px;
+    background: url("../img/text-sedona-index.svg") no-repeat;
+    background-size: cover;
+  }
+}
+
+.hero-image__triangle {
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -31px;
+    left: -1px;
+    width: 160px;
+    height: 57px;
+    background: url("../img/bg-intro-triangle-mobile.svg") no-repeat;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -31px;
+    right: -1px;
+    width: 160px;
+    height: 57px;
+    background: url("../img/bg-intro-triangle-mobile.svg") no-repeat;
+    transform: scaleX(-1);
+  }
 }

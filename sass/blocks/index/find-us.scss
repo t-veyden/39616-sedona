@@ -1,7 +1,18 @@
 .find-us {
+  position: relative;
   display: flex;
+  width: 320px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 211px;
+    left: 146px;
+    width: 27px;
+    height: 27px;
+    background: url("../img/icon-map-marker.svg") no-repeat;
+  }
 }
 
 .find-us__map {
-  margin-top: 49px;
+  margin-top: 50px;
 }

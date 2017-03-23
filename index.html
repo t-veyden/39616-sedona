@@ -8,20 +8,19 @@
   <body class="main-page">
     <header class="page-header">
       <nav class="main-nav  main-nav--closed  main-nav--no-js">
-
         <div class="main-nav__wrapper">
           <ul class="main-nav__items">
             <li class="main-nav__item  main-nav__item--active">
-              <a class="btn__text">Главная</a>
+              <a class="main-nav__link">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a class="btn__text" href="photo.html">Фото и видео</a>
+              <a class="main-nav__link" href="photo.html">Фото и видео</a>
             </li>
             <li class="main-nav__item">
-              <a class="btn__text" href="form.html">Форма отзыва</a>
+              <a class="main-nav__link" href="form.html">Форма отзыва</a>
             </li>
             <li class="main-nav__item">
-              <a class="btn__text" href="#">HTML Academy</a>
+              <a class="main-nav__link" href="#">HTML Academy</a>
             </li>
           </ul>
         </div>
@@ -38,64 +37,70 @@
       </nav>
     </header>
     <main class="container">
-      <div class="hero-image  hero-image--full"></div>
+      <div class="hero-image  hero-image--full">
+        <div class="hero-image__triangle"></div>
+      </div>
       <section class="page-intro">
         <h1 class="page-intro__title  page-intro__title--main">
           Седона&nbsp;&mdash; небольшой<br> городок в&nbsp;Аризоне,<br> заслуживающий большего!
         </h1>
-        <p class="page-intro__description">
+        <p class="page-intro__description  page-intro__description--main">
           Рассмотрим 5&nbsp;причин, по&nbsp;которым Седона круче, чем Гранд Каньон!
         </p>
       </section>
-      <section class="advantage">
-        <div class="advantage__wrapper">
-          <h2 class="advantage__title">Настоящий городок</h2>
-          <p class="advantage__description">Седона не&nbsp;аттракцион для туристов, там течёт своя жизнь</p>
+      <div class="advantage-counter">
+        <section class="advantage">
+          <div class="advantage__wrapper  advantage__wrapper--triangle">
+            <h2 class="advantage__title">Настоящий городок</h2>
+            <p class="advantage__description">Седона не&nbsp;аттракцион для туристов, там течёт своя жизнь</p>
+          </div>
+          <img class="advantage__img"  src="img/photo-city@1x.jpg" width="320" height="260" alt="Местный ресторан">
+          <ul class="advantage__list">
+            <li class="advantage__list-item  advantage__list-item--accomodation">
+              <b class="advantage__title  advantage__title--list">Жильё</b>
+              <p class="advantage__list-description">Рекомендуем пожить в&nbsp;настоящем мотеле, всё как в&nbsp;кино!</p>
+            </li>
+            <li class="advantage__list-item  advantage__list-item--souvenir">
+              <b class="advantage__title  advantage__title--list">Сувениры</b>
+              <p class="advantage__list-description">Не&nbsp;только китайского, но&nbsp;и&nbsp;местного производства!</p>
+            </li>
+            <li class="advantage__list-item  advantage__list-item--food">
+              <b class="advantage__title  advantage__title--list">Еда</b>
+              <p class="advantage__list-description">Всегда заказывайте фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
+            </li>
+          </ul>
+        </section>
+        <section class="advantage">
+          <div class="advantage__wrapper  advantage__wrapper--small">
+            <h2 class="advantage__title">Там есть мост Дьявола</h2>
+            <p class="advantage__description">
+              Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, конечно
+            </p>
+          </div>
+          <img class="advantage__img" src="img/photo-bridge@1x.jpg" width="320" height="260" alt="Мост Дьявола">
+        </section>
+        <div class="advantage__block-wrapper">
+          <section class="advantage  advantage--small">
+            <h2 class="advantage__title">Небольшая площадь</h2>
+            <p class="advantage__description">Все достопримечательности находятся очень близко</p>
+          </section>
+          <section class="advantage  advantage--small">
+            <h2 class="advantage__title">Красивая дорога</h2>
+            <p class="advantage__description">Ехать в&nbsp;Седону из&nbsp;Лас-Вегаса совсем не&nbsp;скучно!</p>
+          </section>
+          <section class="advantage  advantage--small">
+            <h2 class="advantage__title">Мало туристов</h2>
+            <p class="advantage__description">Большинство едет в&nbsp;Гранд Каньон и&nbsp;толпится там</p>
+          </section>
         </div>
-        <img class="advantage__img"  src="img/photo-city@1x.jpg" width="320" height="260" alt="Местный ресторан">
-        <ul class="advantage__list">
-          <li class="advantage__list-item  advantage__list-item--accomodation">
-            <b class="advantage__list-title">Жильё</b>
-            <p class="advantage__list-description">Рекомендуем пожить в&nbsp;настоящем мотеле, всё как в&nbsp;кино!</p>
-          </li>
-          <li class="advantage__list-item  advantage__list-item--souvenir">
-            <b class="advantage__list-title">Сувениры</b>
-            <p class="advantage__list-description">Не&nbsp;только китайского, но&nbsp;и&nbsp;местного производства!</p>
-          </li>
-          <li class="advantage__list-item  advantage__list-item--food">
-            <b class="advantage__list-title">Еда</b>
-            <p class="advantage__list-description">Всегда заказывайте фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
-          </li>
-        </ul>
-      </section>
-      <section class="advantage">
-        <div class="advantage__wrapper  advantage__wrapper--small">
-          <h2 class="advantage__title">Там есть мост Дьявола</h2>
-          <p class="advantage__description">
-            Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, конечно
-          </p>
-        </div>
-        <img class="advantage__img" src="img/photo-bridge@1x.jpg" width="320" height="260" alt="Мост Дьявола">
-      </section>
-      <section class="advantage  advantage--small">
-        <h2 class="advantage__title">Небольшая площадь</h2>
-        <p class="advantage__description">Все достопримечательности находятся очень близко</p>
-      </section>
-      <section class="advantage  advantage--small">
-        <h2 class="advantage__title">Красивая дорога</h2>
-        <p class="advantage__description">Ехать в&nbsp;Седону из&nbsp;Лас-Вегаса совсем не&nbsp;скучно!</p>
-      </section>
-      <section class="advantage  advantage--small">
-        <h2 class="advantage__title">Мало туристов</h2>
-        <p class="advantage__description">Большинство едет в&nbsp;Гранд Каньон и&nbsp;толпится там</p>
-      </section>
+      </div>
       <section class="hotel-search">
         <b class="hotel-search__title">Заинтересовались?</b>
         <p class="hotel-search__description">
           Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;Седоне
         </p>
-        <div class="btn  btn--search">
-          <a class="btn__text" href="#">Найти гостиницу</a>
+        <div class="hotel-search__btn">
+          <a href="#">Найти гостиницу</a>
         </div>
       </section>
       <div class="find-us">

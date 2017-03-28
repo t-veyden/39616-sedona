@@ -2,3 +2,16 @@
   @include container;
   outline: 1px solid #333; /*provisional*/
 }
+
+@media (min-width: #{$tablet-width}) {
+  .container--full {
+    width: 768px;
+  }
+}
+
+@media (min-width: #{$desktop-width}) {
+  .container {
+    background-color: #fff;
+    width: 1200px;
+  }
+}

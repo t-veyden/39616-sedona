@@ -1,6 +1,6 @@
 .btn {
   width: 280px;
-  height: 53px;
+  min-height: 53px;
   text-align: center;
   background-color: $main-blue;
   border: none;
@@ -17,6 +17,7 @@
   &--submit {
     height: 57px;
     font-size: 21px;
+    margin-top: 52px;
   }
   &--error {
     width: 180px;
@@ -28,5 +29,23 @@
     height: 56px;
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+}
+
+@media (min-width: #{$tablet-width}) {
+  .btn {
+    &--submit {
+      margin: 0;
+      margin-top: 58px;
+      width: 50%;
+    }
+    &--error {
+      width: 272px;
+      margin-bottom: 49px;
+    }
+    &--success {
+      width: 458px;
+      margin-bottom: 44px;
+    }
   }
 }

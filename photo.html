@@ -35,11 +35,11 @@
           </button>
         </div>
       </nav>
-    </header>
-    <main class="container">
       <div class="hero-image">
         <div class="hero-image__triangle"></div>
       </div>
+    </header>
+    <main class="container">
       <section class="page-intro">
         <h1 class="page-intro__title">Фото и видео</h1>
         <p class="page-intro__description  page-intro__description--photo">
@@ -47,10 +47,12 @@
         </p>
       </section>
       <section class="photos">
-        <article class="photos__item  photo">
+        <article class="photos__item  photo  photo--full">
           <img class="photo__img" src="img/photo-1-mobile@1x.jpg" width="280" height="280" alt="Дорога, уходящая в закат">
-          <h2 class="photo__title">Неродные просторы</h2>
-          <p class="photo__author">Автор фото: Борис</p>
+          <div class="photo__information">
+            <h2 class="photo__title">Неродные просторы</h2>
+            <p class="photo__author">Автор фото: Борис</p>
+          </div>
           <footer class="photo__social-btn">
             <button class="photo__like" type="button">
               <span class="visually-hidden">Like</span>
@@ -60,8 +62,10 @@
         </article>
         <article class="photos__item  photo">
           <img class="photo__img" src="img/photo-2-mobile@1x.jpg" width="280" height="280" alt="Астролябия золотистая на фоне скал">
-          <h2 class="photo__title">Местная растительность</h2>
-          <p class="photo__author">Автор фото: Сергей</p>
+          <div class="photo__information">
+            <h2 class="photo__title">Местная растительность</h2>
+            <p class="photo__author">Автор фото: Сергей</p>
+          </div>
           <footer class="photo__social-btn">
             <button class="photo__like" type="button">
               <span class="visually-hidden">Like</span>
@@ -71,8 +75,10 @@
         </article>
         <article class="photos__item  photo">
           <img class="photo__img" src="img/photo-3-mobile@1x.jpg" width="280" height="280" alt="Горная дорога">
-          <h2 class="photo__title">Дорога на север</h2>
-          <p class="photo__author">Автор фото: Пётр</p>
+          <div class="photo__information">
+            <h2 class="photo__title">Дорога на север</h2>
+            <p class="photo__author">Автор фото: Пётр</p>
+          </div>
           <footer class="photo__social-btn">
             <button class="photo__like" type="button">
               <span class="visually-hidden">Like</span>
@@ -82,8 +88,10 @@
         </article>
         <article class="photos__item  photo">
           <img class="photo__img" src="img/photo-4-mobile@1x.jpg" width="280" height="280" alt="Мост Дьявола">
-          <h2 class="photo__title">Мост Дьявола</h2>
-          <p class="photo__author">Автор фото: Антон</p>
+          <div class="photo__information">
+            <h2 class="photo__title">Мост Дьявола</h2>
+            <p class="photo__author">Автор фото: Антон</p>
+          </div>
           <footer class="photo__social-btn">
             <button class="photo__like" type="button">
               <span class="visually-hidden">Like</span>
@@ -93,12 +101,12 @@
         </article>
       </section>
       <section class="video">
-        <b class="common-title  video__title">Всё ещё сомневаетесь?</b>
+        <b class="video__title">Всё ещё сомневаетесь?</b>
         <p class="video__description">
           Смотрите видеопрезентацию и&nbsp;скорее за&nbsp;билетами, пока они не&nbsp;подорожали в&nbsp;очередной раз!
         </p>
         <div class="video__container">
-          <video class="video__video-player" width="320" height="201" poster="img/video-mobile@1x.jpg"><!--controls-->
+          <video class="video__video-player" width="320" height="201" poster="img/video-mobile@1x.jpg">
             <source src="#" type="video/mp4">
             <source src="#" type="video/ogg">
             <source src="#" type="video/webm">
@@ -125,7 +133,7 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
+      <div class="page-footer__wrapper  page-footer__wrapper--photo">
         <a class="page-footer__hash-tag" href="#">#visitsedona</a>
         <ul class="page-footer__social  social-block">
           <li class="social-block__item">

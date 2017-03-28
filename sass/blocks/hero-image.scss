@@ -1,4 +1,5 @@
 .hero-image {
+  @include container;
   position: relative;
   top: -28px;
   width: 320px;
@@ -50,5 +51,23 @@
     height: 57px;
     background: url("../img/bg-intro-triangle-mobile.svg") no-repeat;
     transform: scaleX(-1);
+  }
+}
+
+@media (min-width: #{$tablet-width}) {
+  .hero-image {
+    width: 768px;
+    height: 290px;
+    background: #eee;
+    top: 0;
+    &--full {
+      height: 518px;
+    }
+  }
+
+  @media (min-width: #{$desktop-width}) {
+    .hero-image {
+      width: 1200px;
+    }
   }
 }

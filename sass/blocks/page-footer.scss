@@ -50,3 +50,73 @@
     background: url("../img/logo-htmlacademy.svg") no-repeat;
   }
 }
+
+@media (min-width: #{$tablet-width}) {
+  .page-footer__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 65px;
+    &--photo {
+      margin-top: 24px;
+    }
+    &--main {
+      margin-top: 3px;
+    }
+  }
+
+  .page-footer__hash-tag {
+    margin-top: 40px;
+  }
+  &--main {
+    margin-top: 10px;
+  }
+
+  .page-footer__copyright {
+    align-self: center;
+    margin-bottom: 0;
+  }
+
+  .page-footer__wrapper--main .page-footer__copyright {
+    padding-right: 43px;
+    margin-top: 8px;
+  }
+
+  .page-footer__copyright-link::after {
+    top: -29px;
+    left: 58px;
+  }
+}
+
+@media (min-width: #{$desktop-width}) {
+  .page-footer {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+  }
+
+  .page-footer__wrapper {
+    width: 100%;
+    padding: 70px 44px 12px 133px;
+    margin-top: 0;
+    &--main {
+      padding-top: 3px;
+    }
+    &--photo {
+      padding-top: 22px;
+    }
+    &--form {
+      width: 960px;
+      padding: 69px 0 23px 0;
+    }
+  }
+
+  .page-footer__wrapper--form .page-footer__hash-tag {
+    padding-left: 12px;
+  }
+
+  .page-footer__wrapper--form .page-footer__copyright {
+    padding-right: 40px;
+    margin-top: 7px;
+  }
+}

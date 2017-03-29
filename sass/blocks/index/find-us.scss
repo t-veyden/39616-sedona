@@ -14,5 +14,22 @@
 }
 
 .find-us__map {
-  margin-top: 50px;
+  margin-top: 49px;
+}
+
+@media (min-width: #{$tablet-width}) {
+  .find-us {
+    width: 100%;
+  }
+
+  .find-us__map {
+    width: 100%;
+    margin-top: 58px;
+  }
+}
+
+@media (min-width: #{$desktop-width}) {
+  .find-us__map {
+    margin-top: 66px;
+  }
 }

@@ -35,11 +35,11 @@
           </button>
         </div>
       </nav>
-    </header>
-    <main class="container">
       <div class="hero-image">
         <div class="hero-image__triangle"></div>
       </div>
+    </header>
+    <main class="container">
       <section class="page-intro">
         <h1 class="page-intro__title">Оставьте свой отзыв</h1>
         <p class="page-intro__description  page-intro__description--form">
@@ -64,17 +64,19 @@
         </fieldset>
         <fieldset class="form__section  form__section--contacts">
           <legend class="form__title">Контактная информация:</legend>
-          <div class="form__input-pair  form__input-pair--position-top">
-            <label class="form__label" for="phone-number">Контактный телефон*:</label> <!--form__label.icon  form__label.phone-->
-            <div class="form__icon  form__icon--phone">
-              <input class="form__input" type="tel" name="tel" id="phone-number" placeholder="Введите телефон" required>
+          <div class="form__input-block">
+            <div class="form__input-pair  form__input-pair--position-top">
+              <label class="form__label" for="phone-number"><span class="form__label--hidden">Контактный</span> телефон*:</label>
+              <div class="form__icon  form__icon--phone">
+                <input class="form__input" type="tel" name="tel" id="phone-number" placeholder="Введите телефон" required>
+              </div>
+              <p class="form__error">Ошибка, перепроверьте номер</p>
             </div>
-            <p class="form__error">Ошибка, перепроверьте номер</p>
-          </div>
-          <div class="form__input-pair  form__input-pair--position-top">
-            <label class="form__label" for="e-mail">Электронная почта*:</label> <!--form__label.icon  form__label.mail-->
-            <div class="form__icon form__icon--mail">
-              <input class="form__input" type="email" name="email" id="e-mail" placeholder="Введите e-mail" required>
+            <div class="form__input-pair  form__input-pair--position-top">
+              <label class="form__label" for="e-mail">Электронная почта*:</label>
+              <div class="form__icon form__icon--mail">
+                <input class="form__input" type="email" name="email" id="e-mail" placeholder="Введите e-mail" required>
+              </div>
             </div>
           </div>
         </fieldset>
@@ -95,21 +97,23 @@
         </fieldset>
         <fieldset class="form__section  form__section--checkboxes">
           <legend class="form__title">Посещённые достопримечательности:</legend>
-          <div class="form__input-pair">
-            <input class="form__checkbox-btn" type="checkbox" name="sight[]" value="devil-bridge" id="devil-bridge" checked>
-            <label class="form__checkbox-label" for="devil-bridge">Мост Дьявола</label>
-          </div>
-          <div class="form__input-pair">
-            <input class="form__checkbox-btn" type="checkbox" name="sight[]" value="slide-park" id="slide-park" checked>
-            <label class="form__checkbox-label" for="slide-park">Слайд-парк</label>
-          </div>
-          <div class="form__input-pair">
-            <input class="form__checkbox-btn" type="checkbox" name="sight[]" value="bell-mountain" id="bell-mountain">
-            <label class="form__checkbox-label" for="bell-mountain">Гора-Колокол</label>
-          </div>
-          <div class="form__input-pair">
-            <input class="form__checkbox-btn" type="checkbox" name="sight[]" value="red-mountains" id="red-mountains" checked>
-            <label class="form__checkbox-label" for="red-mountains">Красные скалы</label>
+          <div class="form__select-block">
+            <div class="form__input-pair">
+              <input class="form__checkbox-btn" type="checkbox" name="sight[]" value="devil-bridge" id="devil-bridge" checked>
+              <label class="form__checkbox-label" for="devil-bridge">Мост Дьявола</label>
+            </div>
+            <div class="form__input-pair">
+              <input class="form__checkbox-btn" type="checkbox" name="sight[]" value="slide-park" id="slide-park" checked>
+              <label class="form__checkbox-label" for="slide-park">Слайд-парк</label>
+            </div>
+            <div class="form__input-pair">
+              <input class="form__checkbox-btn" type="checkbox" name="sight[]" value="bell-mountain" id="bell-mountain">
+              <label class="form__checkbox-label" for="bell-mountain">Гора-Колокол</label>
+            </div>
+            <div class="form__input-pair">
+              <input class="form__checkbox-btn" type="checkbox" name="sight[]" value="red-mountains" id="red-mountains" checked>
+              <label class="form__checkbox-label" for="red-mountains">Красные скалы</label>
+            </div>
           </div>
         </fieldset>
         <fieldset class="form__section  form__section--review">
@@ -120,12 +124,13 @@
           </div>
         </fieldset>
         <button class="btn  btn--submit" type="submit">Отправить отзыв</button>
+        <p class="form__hint">*&nbsp;&mdash; обязательные поля</p>
       </form>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
+      <div class="page-footer__wrapper  page-footer__wrapper--form">
         <a class="page-footer__hash-tag" href="#">#visitsedona</a>
-        <ul class="page-footer__social  social-block">
+        <ul class="page-footer__social  social-block  social-block--form">
           <li class="social-block__item">
             <a class="social-block__link  social-block__link--tw" href="#">
               <span class="visually-hidden">Twitter</span>

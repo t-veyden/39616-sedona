@@ -24,6 +24,7 @@
   border: none;
   background: url("../img/icon-like.svg") no-repeat center;
   opacity: 0.3;
+  cursor: pointer;
 }
 
 .photo__likes-counter {
@@ -41,28 +42,16 @@
     width: 50%;
     border-bottom: none;
     padding: 0;
+    background-color: $photo-colour;
     &--full {
       width: 100%;
       margin-top: 42px;
+      background-color: $photo-colour;
     }
   }
 
-  .photo:not(:nth-child(3n)) { //not really
-    background-color: $photo-colour;
-  }
-
-  .photo:nth-child(3n) {
+  .photo:nth-child(2n) {
     background-color: $photo-colour2;
-  }
-
-  .photo__img {
-    width: 324px;
-    height: 267px;
-  }
-
-  .photo--full .photo__img {
-    width: 648px;
-    height: 400px;
   }
 
   .photo__title {
@@ -93,7 +82,7 @@
 
 @media (min-width: #{$desktop-width}) {
   .photo {
-    width: 33.3%;
+    width: 400px;
     position: relative;
     &--full {
       width: 100%;
@@ -108,14 +97,6 @@
       background-color: #000;
       opacity: 0.3;
     }
-  }
-
-  .photo__img {
-    width: 400px;
-  }
-
-  .photo--full .photo__img {
-    width: 1200px;
   }
 
   .photo__title {
@@ -134,5 +115,10 @@
     bottom: 27px;
     right: 0;
     color: #fff;
+  }
+
+  .photo__like {
+    background: url("../img/icon-like-white.svg") no-repeat center;
+    opacity: 1;
   }
 }

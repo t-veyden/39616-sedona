@@ -32,6 +32,23 @@
   }
 }
 
+.btn {
+  cursor: pointer;
+  &:hover {
+    background-color: $btn-hover;
+  }
+  &:active {
+    background-color: $btn-active;
+  }
+  &:disabled {
+    background-color: $btn-disabled;
+  }
+}
+
+.btn--text-wrap:active {
+  opacity: 0.3;
+}
+
 @media (min-width: #{$tablet-width}) {
   .btn {
     &--submit {

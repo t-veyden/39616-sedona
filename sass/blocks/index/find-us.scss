@@ -9,7 +9,7 @@
     left: 146px;
     width: 27px;
     height: 27px;
-    background: url("../img/icon-map-marker.svg") no-repeat;
+    background: url("../img/icon-map-marker.svg") no-repeat center;
   }
 }
 
@@ -20,6 +20,10 @@
 @media (min-width: #{$tablet-width}) {
   .find-us {
     width: 100%;
+    &::after {
+      top: 221px;
+      left: 370px;
+    }
   }
 
   .find-us__map {
@@ -29,6 +33,11 @@
 }
 
 @media (min-width: #{$desktop-width}) {
+  .find-us::after {
+    top: 228px;
+    left: 587px;
+  }
+
   .find-us__map {
     margin-top: 66px;
   }

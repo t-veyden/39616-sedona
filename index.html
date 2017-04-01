@@ -2,13 +2,19 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="css/style.css" rel="stylesheet">
+    <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+    </script>
+    <script src="picturefill.js" async></script>
   </head>
   <body class="main-page">
     <header class="page-header">
-      <nav class="main-nav  main-nav--closed  main-nav--no-js">
+      <nav class="main-nav  main-nav--opened  main-nav--nojs">
         <div class="main-nav__wrapper">
           <ul class="main-nav__items">
             <li class="main-nav__item  main-nav__item--active">
@@ -17,6 +23,14 @@
             <li class="main-nav__item">
               <a class="main-nav__link" href="photo.html">Фото и видео</a>
             </li>
+            <!-- <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">HTML Academy</a>
+            </li> -->
+          </ul>
+          <ul class="main-nav__items">
             <li class="main-nav__item">
               <a class="main-nav__link" href="form.html">Форма отзыва</a>
             </li>
@@ -28,7 +42,11 @@
         <div class="main-nav__nav-bar">
           <div class="page-header__logo">
             <a>
-              <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Главная">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Главная">
+              </picture>
             </a>
           </div>
           <button class="main-nav__toggle" type="button">
@@ -55,7 +73,11 @@
             <h2 class="advantage__title">Настоящий городок</h2>
             <p class="advantage__description">Седона не&nbsp;аттракцион для туристов, там течёт своя жизнь</p>
           </div>
-          <img class="advantage__img"  src="img/photo-city@1x.jpg" width="320" height="260" alt="Местный ресторан">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-city@1x.jpg 1x, img/photo-city@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-city-tablet@1x.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+            <img class="advantage__img"  src="img/photo-city-mobile@1x.jpg" srcset="img/photo-city-mobile@2x.jpg 2x" alt="Местный ресторан">
+          </picture>
           <ul class="advantage__list">
             <li class="advantage__list-item  advantage__list-item--accomodation">
               <b class="advantage__title  advantage__title--list">Жильё</b>
@@ -78,7 +100,11 @@
               Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, конечно
             </p>
           </div>
-          <img class="advantage__img" src="img/photo-bridge@1x.jpg" width="320" height="260" alt="Мост Дьявола">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-bridge@1x.jpg 1x, img/photo-bridge@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+            <img class="advantage__img" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Мост Дьявола">
+          </picture>
         </section>
         <div class="advantage__block-wrapper">
           <section class="advantage  advantage--small">
@@ -105,7 +131,11 @@
         </div>
       </section>
       <div class="find-us">
-        <img class="find-us__map" src="img/bg-map-mobile@1x.jpg" width="320" height="350" alt="Карта расположения Седоны">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-maptablete@2x.jpg 2x">
+          <img class="find-us__map" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Карта расположения Седоны">
+        </picture>
       </div>
     </main>
     <footer class="page-footer">
@@ -136,5 +166,10 @@
         </p>
       </div>
     </footer>
+    <script src="js/ofi.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script>
+      objectFitImages();
+    </script>
   </body>
 </html>

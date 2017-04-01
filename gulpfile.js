@@ -6,6 +6,7 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+var ofi = require('postcss-object-fit-images');
 
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
@@ -14,7 +15,8 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer({browsers: [
         "last 2 versions"
-      ]})
+      ]}),
+      ofi
     ]))
     .pipe(gulp.dest("css"))
     .pipe(server.stream());

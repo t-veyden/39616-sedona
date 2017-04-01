@@ -47,7 +47,17 @@
     left: 14px;
     width: 27px;
     height: 34px;
-    background: url("../img/logo-htmlacademy.svg") no-repeat;
+    background: url("../img/logo-htmlacademy.svg") no-repeat center;
+  }
+}
+
+.page-footer__copyright-link {
+  &:hover::after {
+    background: url("../img/logo-htmlacademy-blue.svg") no-repeat center;
+  }
+  &:active::after {
+    background: url("../img/logo-htmlacademy.svg") no-repeat center;
+    opacity: 0.3;
   }
 }
 
@@ -93,6 +103,7 @@
     width: 1200px;
     margin: 0 auto;
     background-color: #fff;
+    box-shadow: 0 9px 15px -1px rgba(0, 0, 0, 0.2);
   }
 
   .page-footer__wrapper {

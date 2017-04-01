@@ -87,15 +87,26 @@
 @media (min-width: #{$tablet-width}) {
   .main-nav {
     width: 768px;
+    // display: flex;
+  }
+
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .main-nav__items {
     display: flex;
+    // flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+    width: 40%;
   }
 
   .main-nav__item {
-    width: 20%;
+    // width: 20%;
+    width: 50%;
     border: none;
     box-shadow: none;
     background-color: #fff;
@@ -103,10 +114,10 @@
       box-shadow: none;
     }
     &:nth-child(2) {
-      margin-right: 80px; //is there a better way but to pack them?
+      // margin-right: 80px;
     }
     &:nth-child(3) {
-      margin-left: 80px;
+      // margin-left: 80px;
     }
     &:not(.main-nav__item--active):hover {
       background-color: #fff;

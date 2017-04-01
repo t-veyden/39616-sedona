@@ -42,17 +42,15 @@
     width: 50%;
     border-bottom: none;
     padding: 0;
+    background-color: $photo-colour;
     &--full {
       width: 100%;
       margin-top: 42px;
+      background-color: $photo-colour;
     }
   }
 
-  .photo:not(:nth-child(3n)) { //not really
-    background-color: $photo-colour;
-  }
-
-  .photo:nth-child(3n) {
+  .photo:nth-child(2n) {
     background-color: $photo-colour2;
   }
 

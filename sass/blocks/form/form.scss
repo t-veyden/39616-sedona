@@ -144,6 +144,17 @@
   }
 }
 
+.form__input {
+  &:hover {
+    background-color: $form-interaction;
+  }
+  &:focus {
+    background-color: #fff;
+    outline: none;
+    box-shadow: inset 0 0 0 3px $form-interaction;
+  }
+}
+
 .form__input-pair--position-top .form__input {
   box-sizing: content-box;
   width: 203px;
@@ -225,6 +236,18 @@
   }
 }
 
+.form__radio-label {
+  &:hover::before {
+    background-color: $select-hover;
+  }
+  &:active::before {
+    background-color: $select-active;
+  }
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
 #impression-positive:checked ~ label[for="impression-positive"]::after,
 #impression-negative:checked ~ label[for="impression-negative"]::after,
 #impression-undefined:checked ~ label[for="impression-undefined"]::after {
@@ -265,6 +288,18 @@
   }
 }
 
+.form__checkbox-label {
+  &:hover::before {
+    background-color: $select-hover;
+  }
+  &:active::before {
+    background-color: $select-active;
+  }
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
 #devil-bridge:checked ~ label[for="devil-bridge"]::after,
 #slide-park:checked ~ label[for="slide-park"]::after,
 #bell-mountain:checked ~ label[for="bell-mountain"]::after,
@@ -287,6 +322,14 @@
   background-color: $form-colour;
   padding: 0;
   padding: 13px 6px 15px 20px;
+  &:hover {
+    background-color: $form-interaction;
+  }
+  &:focus {
+    background-color: #fff;
+    outline: none;
+    box-shadow: inset 0 0 0 3px $form-interaction;
+  }
 }
 
 .form__hint {

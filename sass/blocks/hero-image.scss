@@ -12,7 +12,7 @@
     right: 44px;
     width: 232px;
     height: 39px;
-    background: url("../img/text-sedona.svg") no-repeat;
+    background: url("../img/text-sedona.svg") no-repeat center;
     background-size: cover;
   }
 }
@@ -27,47 +27,86 @@
     right: 19px;
     width: 282px;
     height: 214px;
-    background: url("../img/text-sedona-index.svg") no-repeat;
+    background: url("../img/text-sedona-index.svg") no-repeat center;
     background-size: cover;
   }
 }
 
 .hero-image__triangle {
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: -31px;
-    left: -1px;
-    width: 160px;
-    height: 57px;
-    background: url("../img/bg-intro-triangle-mobile.svg") no-repeat;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -31px;
-    right: -1px;
-    width: 160px;
-    height: 57px;
-    background: url("../img/bg-intro-triangle-mobile.svg") no-repeat;
-    transform: scaleX(-1);
-  }
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 320px;
+  height: 57px;
+  background: url("../img/bg-intro-triangle-mobile.svg") no-repeat center;
+  background-size: cover;
 }
 
 @media (min-width: #{$tablet-width}) {
   .hero-image {
+    top: 0;
     width: 768px;
     height: 290px;
-    background: #eee;
-    top: 0;
-    &--full {
-      height: 518px;
+    background: #eee url("../img/bg-back-tablet@1x.jpg") no-repeat center;
+    &::after {
+      top: 93px;
+      right: 154px;
+      width: 458px;
+      height: 78px;
     }
   }
 
-  @media (min-width: #{$desktop-width}) {
-    .hero-image {
-      width: 1200px;
+  .hero-image--full {
+    height: 518px;
+    &::after {
+      top: 77px;
+      right: 154px;
+      width: 460px;
+      height: 350px;
     }
+  }
+
+  .hero-image__triangle {
+    bottom: 0;
+    left: 0;
+    width: 768px;
+    background: url("../img/bg-intro-triangle-tablet.svg") no-repeat center;
+  }
+}
+
+@media (min-width: #{$tablet-width}) and (min-resolution: 144dpi),
+       (min-width: #{$tablet-width}) and (min-resolution: 1.5dppx) {
+  .hero-image {
+    background: #eee url("../img/bg-back-tablet@2x.jpg") no-repeat center;
+  }
+}
+
+@media (min-width: #{$desktop-width}) {
+  .hero-image {
+    width: 1200px;
+    box-shadow: 11px 0 15px -10px rgba(0, 0, 0, 0.2),
+                -11px 0 15px -10px rgba(0, 0, 0, 0.2);
+    background: #eee url("../img/bg-back-desktop@1x.jpg") no-repeat center;
+    &::after {
+      top: 102px;
+      right: 370px;
+    }
+  }
+
+  .hero-image--full::after {
+    top: 77px;
+    right: 370px;
+  }
+
+  .hero-image__triangle {
+    width: 1200px;
+    background: url("../img/bg-intro-triangle-desktop.svg") no-repeat center;
+  }
+}
+
+@media (min-width: #{$desktop-width}) and (min-resolution: 144dpi),
+       (min-width: #{$desktop-width}) and (min-resolution: 1.5dppx) {
+  .hero-image {
+    background: #eee url("../img/bg-back-desktop@2x.jpg") no-repeat center;
   }
 }

@@ -49,6 +49,10 @@
   min-height: 83px;
 }
 
+.main-nav__toggle {
+  cursor: pointer;
+}
+
 .main-nav--closed .main-nav__toggle {
   position: absolute;
   top: 16px;
@@ -68,6 +72,16 @@
   height: 22px;
   border: none;
   background: url("../img/icon-cross.svg") no-repeat center;
+}
+
+@media (max-width: 767px) {
+  .main-nav--closed .main-nav__items {
+      display: none;
+    }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
 }
 
 @media (min-width: #{$tablet-width}) {
@@ -143,6 +157,7 @@
 @media (min-width: #{$desktop-width}) {
   .main-nav {
     width: 1200px;
+    box-shadow: 0 0 15px -1px rgba(0, 0, 0, 0.2);
   }
 
   .main-nav__items {

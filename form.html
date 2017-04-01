@@ -2,12 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav  main-nav--closed  main-nav--no-js">
+      <nav class="main-nav  main-nav--opened  main-nav--nojs">
         <div class="main-nav__wrapper">
           <ul class="main-nav__items">
             <li class="main-nav__item">
@@ -26,8 +28,12 @@
         </div>
         <div class="main-nav__nav-bar">
           <div class="page-header__logo">
-            <a>
-              <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Главная">
+            <a href="index.html">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Главная">
+              </picture>
             </a>
           </div>
           <button class="main-nav__toggle" type="button">
@@ -123,7 +129,7 @@
             <textarea class="form__review-field" name="trip-review" id="review">Опишите подробно все свои восторги</textarea>
           </div>
         </fieldset>
-        <button class="btn  btn--submit" type="submit">Отправить отзыв</button>
+        <button class="btn  btn--submit" type="submit"><span class="btn--text-wrap">Отправить отзыв</span></button>
         <p class="form__hint">*&nbsp;&mdash; обязательные поля</p>
       </form>
     </main>
@@ -163,7 +169,7 @@
         <p class="modal-content__description">
           Проверьте поля, выделенные красным, скорее всего вы&nbsp;забыли их&nbsp;заполнить
         </p>
-        <button class="btn  btn--error" type="button">OK</button>
+        <button class="btn  btn--error" type="button"><span class="btn--text-wrap">OK</span></button>
       </div>
     </div>
     <div class="modal-content  modal-content--success">
@@ -174,8 +180,9 @@
         <p class="modal-content__description">
           Спасибо за&nbsp;ваше участие, ваш отзыв уже поступил к&nbsp;нам. В&nbsp;ближайшее время мы&nbsp;опубликуем его на&nbsp;сайте.
         </p>
-        <button class="btn  btn--success" type="button">Закрыть окно</button>
+        <button class="btn  btn--success" type="button"><span class="btn--text-wrap">Закрыть окно</span></button>
       </div>
     </div>
+    <script src="js/menu.js"></script>
   </body>
 </html>

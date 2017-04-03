@@ -2,6 +2,20 @@
   padding-top: 23px;
 }
 
+.photo a {
+  cursor: pointer;
+}
+
+.photo__img {
+  // width: 280px;
+  // height: 280px;
+  background-color: $photo-colour;
+  @media (max-width: 767px) {
+    width: 280px;
+    height: 280px;
+  }
+}
+
 .photo__title {
   font-size: 14px;
   font-weight: bold;
@@ -33,26 +47,42 @@
   line-height: 1.5;
 }
 
-@media (min-width: #{$tablet-width}) {
+@media ($tablet) {
   .photo {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-content: flex-start;
-    width: 50%;
+    // align-content: flex-start;
+    // width: 50%;
+    width: 324px;
     border-bottom: none;
     padding: 0;
     background-color: $photo-colour;
     &--full {
-      width: 100%;
+      // width: 100%;
+      width: 648px;
       margin-top: 42px;
       background-color: $photo-colour;
     }
   }
 
-  .photo:nth-child(2n) {
+  .photo:nth-child(2n + 3) {
     background-color: $photo-colour2;
   }
+
+  // .photo picture {
+  //   @media (max-width: 1279px) {
+  //     width: 324px;
+  //     height: 267px;
+  //   }
+  // }
+  //
+  // .photo--full picture {
+  //   @media (max-width: 1279px) {
+  //     width: 648px;
+  //     height: 400px;
+  //   }
+  // }
 
   .photo__title {
     padding-top: 15px;
@@ -78,9 +108,13 @@
   .photo__likes-counter {
     margin-left: 6px;
   }
+
+  .photo__information {
+
+  }
 }
 
-@media (min-width: #{$desktop-width}) {
+@media ($desktop) {
   .photo {
     width: 400px;
     position: relative;
@@ -98,6 +132,11 @@
       opacity: 0.3;
     }
   }
+
+  // .photo__img {
+  //   width: 400px;
+  //   height: 267px;
+  // }
 
   .photo__title {
     color: #fff;

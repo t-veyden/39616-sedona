@@ -25,12 +25,15 @@
 
 .advantage__title {
   display: flex;
+  // display: inline-flex;
   flex-direction: column;
+  // flex-basis: 20px;
   margin-top: 56px;
   margin-bottom: 0;
   &:not(.advantage__title--list)::after {
     content: "— №" counter(number) " —";
     counter-increment: number;
+    display: block;
     bottom: -3px;
     left: 134px;
     font-size: 14px;
@@ -147,12 +150,13 @@
   margin-bottom: 28px;
 }
 
-@media (min-width: #{$tablet-width}) {
+@media ($tablet) {
   .advantage {
     flex-direction: row;
     flex-wrap: wrap;
     &--small {
-      width: 33.3%;
+      width: 33%;
+      flex-grow: 1;
     }
     &--small::after {
       display: none;
@@ -166,10 +170,17 @@
   }
 
   .advantage__wrapper {
-    width: 33.3%;
+    // width: 33.3%;
+    width: 33%;
+    flex-grow: 1;
+    // width: 256px;
     &--triangle::before {
       display: none;
     }
+  }
+
+  .advantage picture {
+    flex-shrink: 0;
   }
 
   .advantage--reverse .advantage__wrapper {
@@ -204,9 +215,10 @@
   }
 
   .advantage__list-item {
-    width: 33.3%;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    width: 33%;
     &--food {
       order: 0;
     }
@@ -256,7 +268,7 @@
   }
 }
 
-@media (min-width: #{$desktop-width}) {
+@media ($desktop) {
   .advantage__title {
     margin-top: 51px;
     padding: 0 100px;
@@ -269,7 +281,12 @@
   .advantage__img {
     width: 800px;
     height: 256px;
-    object-fit: cover; //but that's obviously not good
+    object-fit: cover;
+  }
+
+  .advantage--small {
+    flex-grow: 1;
+    width: 33%;
   }
 
   .advantage__list-item {

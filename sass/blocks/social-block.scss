@@ -52,13 +52,13 @@
   opacity: 0.3;
 }
 
-@media (min-width: #{$tablet-width}) {
+@media ($tablet) {
   .social-block {
     margin: 9px 8px 0 0;
   }
 }
 
-@media (min-width: #{$desktop-width}) {
+@media ($desktop) {
   .social-block {
     margin-right: 97px;
     &--form {

@@ -1,13 +1,43 @@
+.photos {
+  // width: 320px;
+  // margin: 0 auto;
+}
+
 .photos__item {
-  position: relative;
   padding: 0 20px;
+  width: 320px;
+  margin: 0 auto;
   padding-bottom: 15px;
   border-bottom: 1px solid $divider;
 }
 
-@media (min-width: #{$tablet-width}) {
+@media ($tablet) {
+  .photos {
+    width: 648px;
+    margin: 0 auto;
+  }
+
+  .photos__item {
+    margin: 0;
+    // width: 324px;
+    // margin: 0 auto;
+    // padding: 0 20px;
+  }
+
+  .photos__item:last-child {
+    margin: 0;
+    margin-right: auto;
+  }
+
   .photos {
     display: flex;
     flex-wrap: wrap;
+    // flex-basis: 768px;
+  }
+}
+
+@media ($desktop) {
+  .photos {
+    width: 1200px;
   }
 }

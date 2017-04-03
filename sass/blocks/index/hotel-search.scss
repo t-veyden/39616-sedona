@@ -49,7 +49,11 @@
   }
 }
 
-@media (min-width: #{$tablet-width}) {
+.hotel-search__btn--disabled {
+  background-color: $btn-disabled;
+}
+
+@media ($tablet) {
   .hotel-search__title {
     font-size: 30px;
     margin-top: 48px;
@@ -66,7 +70,7 @@
   }
 }
 
-@media (min-width: #{$desktop-width}) {
+@media ($desktop) {
   .hotel-search__description {
     padding: 0 400px; //is there a better way?
     margin-bottom: 47px;

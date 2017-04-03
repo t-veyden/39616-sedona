@@ -1,10 +1,10 @@
 @mixin container() {
   width: 320px;
   margin: 0 auto;
-  @media (min-width: #{$tablet-width}) {
+  @media ($tablet) {
     width: 648px;
   }
-  @media (min-width: #{$desktop-width}) {
+  @media ($desktop) {
     width: 960px;
   }
 }

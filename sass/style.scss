@@ -1,8 +1,10 @@
 // COMMON
+@import "normalize.scss";
 @import "fonts.scss";
 @import "variables.scss";
 @import "mixins.scss";
 @import "scaffolding.scss";
+@import "blocks/page-shadow.scss";
 @import "blocks/page-header.scss";
 @import "blocks/container.scss";
 @import "blocks/main-nav.scss";

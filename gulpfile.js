@@ -6,7 +6,11 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
-var ofi = require('postcss-object-fit-images');
+var ofi = require("postcss-object-fit-images");
+var mqpacker = require("css-mqpacker");
+var minify = require("gulp-csso");
+var rename = require("gulp-rename");
+var imagemin = require("gulp-imagemin");
 
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
@@ -16,11 +20,26 @@ gulp.task("style", function() {
       autoprefixer({browsers: [
         "last 2 versions"
       ]}),
+      mqpacker({
+        sort: true
+      })
       ofi
     ]))
+    .pipe(gulp.dest("css")) //мне кажется это не надо, там в конце
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
     .pipe(gulp.dest("css"))
     .pipe(server.stream());
 });
+
+.gulp.task("images", function() {
+  return gulp.src("img/**/*.{png,jpg,gif}")
+    .pipe(imagemin([
+      imagemin.optipng({optimizationlevel: 3}),
+      imagemin.jpegtran({progressive: true})
+    ]))
+  .pipe(gulp.dest("img"));
+})
 
 gulp.task("serve", ["style"], function() {
   server.init({

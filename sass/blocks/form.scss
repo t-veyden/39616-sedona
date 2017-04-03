@@ -8,7 +8,7 @@
     border-bottom: 1px solid $divider;
   }
   &--personal {
-      padding-bottom: 3px;
+    padding-bottom: 3px;
   }
   &--contacts {
     padding-bottom: 3px;
@@ -17,7 +17,7 @@
     padding-bottom: 1px;
   }
   &--checkboxes {
-    padding-bottom: 45px;
+    padding-bottom: 41px;
   }
 }
 
@@ -31,7 +31,13 @@
   color: #000;
   text-align: center;
   padding-top: 16px;
+  margin: 0 7%;
   margin-bottom: 20px;
+}
+
+.form__section--personal .form__title {
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
 .form__section--contacts .form__title {
@@ -44,7 +50,6 @@
 }
 
 .form__section--checkboxes .form__title {
-  padding-top: 16px;
   margin-bottom: 4px;
 }
 
@@ -209,15 +214,16 @@
 
 .form__radio-label {
   position: relative;
-  padding-left: 78px;
+  padding-left: 85px;
   margin-bottom: 42px;
   margin-left: -20px;
   cursor: pointer;
   &::before {
     content: "";
+    display: block;
     position: absolute;
     top: -50%;
-    left: 0;
+    left: 7px;
     height: 55px;
     width: 55px;
     border-radius: 50%;
@@ -225,9 +231,10 @@
   }
   &::after {
     content: "";
+    display: block;
     position: absolute;
     top: 4px;
-    left: 17px;
+    left: 25px;
     width: 21px;
     height: 21px;
     background-color: #000;
@@ -261,16 +268,17 @@
 
 .form__checkbox-label {
   position: relative;
-  padding-left: 79px;
+  padding-left: 85px;
   margin-left: -20px;
   margin-top: 26px;
-  margin-bottom: 26px;
+  margin-bottom: 27px;
   cursor: pointer;
   &::before {
     content: "";
+    display: block;
     position: absolute;
     top: -11px;
-    left: 0;
+    left: 7px;
     height: 54px;
     width: 54px;
     border-radius: 10%;
@@ -278,9 +286,10 @@
   }
   &::after {
     content: "";
+    display: block;
     position: absolute;
     top: 9px;
-    left: 17px;
+    left: 22px;
     width: 24px;
     height: 16px;
     background: url("../img/icon-tick.svg") no-repeat center;
@@ -336,7 +345,7 @@
   display: none;
 }
 
-@media (min-width: #{$tablet-width}) {
+@media ($tablet) {
   .form {
     display: flex;
     flex-wrap: wrap;
@@ -372,16 +381,16 @@
     }
   }
 
-  .form__section--radio {
+  .form {
     position: relative;
     &::after {
       content: "";
       display: block;
       position: absolute;
-      top: 59px;
-      right: 0;
+      top: 58px;
+      right: 50%;
       width: 1px;
-      height: 292px;
+      height: 293px;
       background-color: $divider;
     }
   }
@@ -391,58 +400,51 @@
     line-height: 1.35;
     padding-top: 52px;
     margin-bottom: 69px;
+  }
+
+  .form__decoration {
     &::before {
       content: "";
+      display: block;
       position: absolute;
-      top: 76px;
+      top: 432px;
       left: 0;
       width: 126px;
       height: 1px;
       background-color: $divider;
+      box-shadow: 0 321px 0 0 $divider,
+                  0 614px 0 0 $divider;
     }
     &::after {
       content: "";
+      display: block;
       position: absolute;
-      top: 76px;
+      top: 432px;
       right: 0;
       width: 126px;
       height: 1px;
       background-color: $divider;
+      box-shadow: 0 321px 0 0 $divider,
+                  0 614px 0 0 $divider;
     }
   }
 
   .form__section--personal .form__title {
     padding-right: 53px;
     margin-bottom: 56px;
-    &::before {
-      display: none;
-    }
-    &::after {
-      display: none;
-    }
   }
 
   .form__section--contacts .form__title {
     padding-top: 36px;
     margin-bottom: 22px;
-    &::before {
-      top: 49px;
-    }
-    &::after {
-      top: 49px;
-    }
+    margin-left: 30%;
   }
 
   .form__section--radio .form__title {
     text-align: left;
     padding-top: 52px;
     margin-bottom: 72px;
-    &::before {
-      display: none;
-    }
-    &::after {
-      display: none;
-    }
+    margin-left: 0;
   }
 
   .form__section--checkboxes .form__title {
@@ -453,12 +455,6 @@
   .form__section--review .form__title {
     padding-top: 45px;
     margin-bottom: 56px;
-    &::before {
-      top: 58px;
-    }
-    &::after {
-      top: 58px;
-    }
   }
 
   .form__input-pair--left .form__label {
@@ -471,13 +467,21 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-content: space-between;
     height: 180px;
+    width: 535px;
     padding-left: 76px;
   }
 
   .form__radio-label {
-    padding-left: 75px;
+    padding-left: 82px;
     margin-bottom: 50px;
+    &::before {
+      left: 7px;
+    }
+    &::after {
+      left: 24px;
+    }
   }
 
   .form__checkbox-label {
@@ -491,7 +495,7 @@
       right: 0;
     }
     &::after {
-      right: 17px;
+      right: 21px;
     }
   }
 
@@ -521,47 +525,31 @@
 
   .form__error {
     top: -14px;
-    left: 457px;
+    left: 454px;
   }
 
   .form__hint {
     display: block;
     margin-left: auto;
-    margin-top: auto;
+    margin-top: 75px;
   }
 }
 
-@media (min-width: #{$desktop-width}) {
+@media ($desktop) {
   .form {
     width: 960px;
     margin: 0 auto;
   }
 
-  .form__title {
-    &::before {
-      top: 35px;
-      width: 280px;
-    }
-    &::after {
-      top: 35px;
-      width: 280px;
-    }
-  }
-
   .form__section--personal .form__title {
     text-align: left;
     padding: 38px 0 0 80px;
+    margin-left: 0;
   }
 
   .form__section--contacts .form__title {
     padding-top: 33px;
     margin-bottom: 73px;
-    &::before {
-      top: 46px;
-    }
-    &::after {
-      top: 46px;
-    }
   }
 
   .form__section--radio .form__title {
@@ -575,12 +563,6 @@
 
   .form__section--review .form__title {
     padding-top: 35px;
-    &::before {
-      top: 48px;
-    }
-    &::after {
-      top: 48px;
-    }
   }
 
   .form__section--radio {
@@ -614,7 +596,13 @@
   }
 
   .form__radio-label {
-    padding-left: 80px;
+    padding-left: 87px;
+    &::before {
+      left: 12px;
+    }
+    &::after {
+      left: 29px;
+    }
   }
 
   .form__section--contacts .form__label {
@@ -654,6 +642,21 @@
 
   .form__select-block .form__input-pair:nth-child(4) {
     order: 2;
+  }
+
+  .form__decoration {
+    &::before {
+      top: 415px;
+      width: 277px;
+      box-shadow: 0 224px 0 0 $divider,
+                  0 427px 0 0 $divider;
+    }
+    &::after {
+      top: 415px;
+      width: 277px;
+      box-shadow: 0 224px 0 0 $divider,
+                  0 427px 0 0 $divider;
+    }
   }
 
   .form__label--hidden {

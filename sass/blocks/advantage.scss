@@ -31,6 +31,7 @@
   &:not(.advantage__title--list)::after {
     content: "— №" counter(number) " —";
     counter-increment: number;
+    display: block;
     bottom: -3px;
     left: 134px;
     font-size: 14px;
@@ -119,7 +120,7 @@
     left: -50px;
     width: 39px;
     height: 37px;
-    background: url("../img/icon-house.svg") no-repeat;
+    background: url("../img/icon-house.svg") no-repeat center;
     background-size: cover;
   }
   &--souvenir::before {
@@ -127,7 +128,7 @@
     left: -46px;
     width: 32px;
     height: 38px;
-    background: url("../img/icon-gift.svg") no-repeat;
+    background: url("../img/icon-gift.svg") no-repeat center;
     background-size: cover;
   }
   &--food::before {
@@ -135,7 +136,7 @@
     left: -52px;
     width: 40px;
     height: 35px;
-    background: url("../img/icon-burger.svg") no-repeat;
+    background: url("../img/icon-burger.svg") no-repeat center;
     background-size: cover;
   }
 }
@@ -147,12 +148,13 @@
   margin-bottom: 28px;
 }
 
-@media (min-width: #{$tablet-width}) {
+@media ($tablet) {
   .advantage {
     flex-direction: row;
     flex-wrap: wrap;
     &--small {
-      width: 33.3%;
+      width: 33%;
+      flex-grow: 1;
     }
     &--small::after {
       display: none;
@@ -166,10 +168,15 @@
   }
 
   .advantage__wrapper {
-    width: 33.3%;
+    width: 33%;
+    flex-grow: 1;
     &--triangle::before {
       display: none;
     }
+  }
+
+  .advantage picture {
+    flex-shrink: 0;
   }
 
   .advantage--reverse .advantage__wrapper {
@@ -204,9 +211,10 @@
   }
 
   .advantage__list-item {
-    width: 33.3%;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    width: 33%;
     &--food {
       order: 0;
     }
@@ -256,7 +264,7 @@
   }
 }
 
-@media (min-width: #{$desktop-width}) {
+@media ($desktop) {
   .advantage__title {
     margin-top: 51px;
     padding: 0 100px;
@@ -269,7 +277,12 @@
   .advantage__img {
     width: 800px;
     height: 256px;
-    object-fit: cover; //but that's obviously not good
+    object-fit: cover;
+  }
+
+  .advantage--small {
+    flex-grow: 1;
+    width: 33%;
   }
 
   .advantage__list-item {

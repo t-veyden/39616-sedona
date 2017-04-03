@@ -35,7 +35,7 @@ img {
   clip: rect(0 0 0 0);
 }
 
-@media (min-width: #{$desktop-width}) {
+@media ($tablet) {
   body {
     background-color: $body-colour;
   }

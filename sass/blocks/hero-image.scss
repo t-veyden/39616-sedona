@@ -4,7 +4,10 @@
   top: -28px;
   width: 320px;
   height: 158px;
-  background: url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 100%;
+  background: $main-blue url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 100%;
+  @media ($retina) {
+      background: $main-blue url("../img/bg-back-mobile@2x.jpg") no-repeat 50% 100%;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -42,12 +45,15 @@
   background-size: cover;
 }
 
-@media (min-width: #{$tablet-width}) {
+@media ($tablet) {
   .hero-image {
     top: 0;
     width: 768px;
     height: 290px;
-    background: #eee url("../img/bg-back-tablet@1x.jpg") no-repeat center;
+    background: $main-blue url("../img/bg-back-tablet@1x.jpg") no-repeat 50% 100%;
+    @media ($retina) {
+      background: $main-blue url("../img/bg-back-tablet@2x.jpg") no-repeat 50% 100%;
+    }
     &::after {
       top: 93px;
       right: 154px;
@@ -74,23 +80,21 @@
   }
 }
 
-@media (min-width: #{$tablet-width}) and (min-resolution: 144dpi),
-        (min-width: #{$tablet-width}) and (min-resolution: 1.5dppx) {
-  .hero-image {
-    background: #eee url("../img/bg-back-tablet@2x.jpg") no-repeat center;
-  }
-}
-
-@media (min-width: #{$desktop-width}) {
+@media ($desktop) {
   .hero-image {
     width: 1200px;
-    box-shadow: 11px 0 15px -10px rgba(0, 0, 0, 0.2),
-                -11px 0 15px -10px rgba(0, 0, 0, 0.2);
-    background: #eee url("../img/bg-back-desktop@1x.jpg") no-repeat center;
+    background: $main-blue url("../img/bg-back-desktop@1x.jpg") no-repeat 50% 100%;
+    @media ($retina) {
+      background: $main-blue url("../img/bg-back-desktop@2x.jpg") no-repeat 50% 100%;
+    }
     &::after {
       top: 102px;
       right: 370px;
     }
+  }
+
+  .hero-image:not(.hero-image--full) {
+    height: 300px;
   }
 
   .hero-image--full::after {
@@ -101,12 +105,5 @@
   .hero-image__triangle {
     width: 1200px;
     background: url("../img/bg-intro-triangle-desktop.svg") no-repeat center;
-  }
-}
-
-@media (min-width: #{$desktop-width}) and (min-resolution: 144dpi),
-        (min-width: #{$desktop-width}) and (min-resolution: 1.5dppx) {
-  .hero-image {
-    background: #eee url("../img/bg-back-desktop@2x.jpg") no-repeat center;
   }
 }

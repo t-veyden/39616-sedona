@@ -2,16 +2,14 @@
   @include container;
 }
 
-@media (min-width: #{$tablet-width}) {
+@media ($tablet) {
   .container--full {
     width: 768px;
   }
 }
 
-@media (min-width: #{$desktop-width}) {
+@media ($desktop) {
   .container {
     width: 1200px;
-    background-color: #fff;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   }
 }

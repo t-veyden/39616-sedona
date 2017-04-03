@@ -32,43 +32,35 @@
 }
 
 .page-footer__copyright {
-  margin-top: 12px;
-  padding-right: 41px;
+  margin-top: 9px;
 }
 
 .page-footer__copyright-link {
-  position: relative;
+  display: inline-block;
   color: #000;
   text-decoration: none;
-  &::after {
-    content: "";
-    position: absolute;
-    top: -6px;
-    left: 14px;
-    width: 27px;
-    height: 34px;
-    background: url("../img/logo-htmlacademy.svg") no-repeat center;
-  }
+  padding-left: 10px;
+  vertical-align: middle;
 }
 
-.page-footer__copyright-link {
-  &:hover::after {
-    background: url("../img/logo-htmlacademy-blue.svg") no-repeat center;
+.page-footer__copyright-svg {
+  &:hover {
+    fill: $main-blue;
   }
-  &:active::after {
-    background: url("../img/logo-htmlacademy.svg") no-repeat center;
+  &:active {
+    fill: #000;
     opacity: 0.3;
   }
 }
 
-@media (min-width: #{$tablet-width}) {
+@media ($tablet) {
   .page-footer__wrapper {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 65px;
     &--photo {
-      margin-top: 24px;
+      margin-top: 45px;
     }
     &--main {
       margin-top: 3px;
@@ -77,9 +69,9 @@
 
   .page-footer__hash-tag {
     margin-top: 40px;
-  }
-  &--main {
-    margin-top: 10px;
+    &--main {
+      margin-top: 10px;
+    }
   }
 
   .page-footer__copyright {
@@ -88,22 +80,15 @@
   }
 
   .page-footer__wrapper--main .page-footer__copyright {
-    padding-right: 43px;
-    margin-top: 8px;
-  }
-
-  .page-footer__copyright-link::after {
-    top: -29px;
-    left: 58px;
+    margin-top: 14px;
   }
 }
 
-@media (min-width: #{$desktop-width}) {
+@media ($desktop) {
   .page-footer {
     width: 1200px;
     margin: 0 auto;
     background-color: #fff;
-    box-shadow: 0 9px 15px -1px rgba(0, 0, 0, 0.2);
   }
 
   .page-footer__wrapper {
@@ -111,10 +96,11 @@
     padding: 70px 44px 12px 133px;
     margin-top: 0;
     &--main {
-      padding-top: 3px;
+      padding-top: 7px;
     }
     &--photo {
       padding-top: 22px;
+      margin-top: 67px;
     }
     &--form {
       width: 960px;
@@ -122,12 +108,19 @@
     }
   }
 
+  .page-footer__hash-tag--main {
+    padding-top: 25px;
+  }
+
+  .page-footer__copyright-link {
+      padding-top: 4px;
+  }
+
   .page-footer__wrapper--form .page-footer__hash-tag {
     padding-left: 12px;
   }
 
   .page-footer__wrapper--form .page-footer__copyright {
-    padding-right: 40px;
     margin-top: 7px;
   }
 }

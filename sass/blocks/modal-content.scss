@@ -1,6 +1,35 @@
+.popup {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
 .modal-content {
+  position: absolute;
   @include container;
-  outline: 1px solid #333; /*provisional*/
+  background-color: #fff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: none;
+  &--error {
+    top: -1037px;
+    left: 2px;
+  }
+  &--success {
+    top: -708px;
+    left: 2px;
+  }
+}
+
+@keyframes lift-up {
+    0% {transform: translateY(400px);}
+    100% {transform: translateY(0px);}
+}
+
+.modal-content--show {
+  display: block;
+  animation: lift-up 0.6s;
 }
 
 .modal-content__wrapper {
@@ -29,7 +58,7 @@
   margin-bottom: 35px;
 }
 
-.modal-content--success {
+.modal-content--success .modal-content__wrapper {
   position: relative;
   &::before {
     content: "";
@@ -43,20 +72,28 @@
   }
 }
 
-@media (min-width: #{$tablet-width}) {
+@media ($tablet) {
+  .popup {
+    width: 768px;
+  }
+
   .modal-content {
     background-color: #fff;
     z-index: -1;
     &--error {
+      left: 182px;
       width: 400px;
     }
     &--success {
+      top: -641px;
+      left: 64px;
       width: 640px;
     }
-    &--success::before {
+  }
+
+  .modal-content--success .modal-content__wrapper::before {
       width: 100%;
       height: 146px;
-    }
   }
 
   .modal-content__wrapper {

@@ -8,7 +8,6 @@
 .modal-content {
   position: absolute;
   @include container;
-  // outline: 1px solid #333; /*provisional*/
   background-color: #fff;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -24,7 +23,7 @@
 }
 
 @keyframes lift-up {
-    0% {transform: translateY(400px);} //is it correct?
+    0% {transform: translateY(400px);}
     100% {transform: translateY(0px);}
 }
 

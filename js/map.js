@@ -6,8 +6,8 @@ ymaps.ready(function(){
         zoom: 8
     });
     var myPlacemark = new ymaps.Placemark([34.79979563108098,-111.61052094357414], {}, {
-        iconLayout: 'default#image',
-        iconImageHref: 'img/icon-map-marker.svg',
+        iconLayout: "default#image",
+        iconImageHref: "img/icon-map-marker.svg",
         iconImageSize: [27, 27],
         iconImageOffset: [-13, -13]
     });

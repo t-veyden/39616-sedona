@@ -1,8 +1,3 @@
-.photos {
-  // width: 320px;
-  // margin: 0 auto;
-}
-
 .photos__item {
   padding: 0 20px;
   width: 320px;
@@ -19,9 +14,6 @@
 
   .photos__item {
     margin: 0;
-    // width: 324px;
-    // margin: 0 auto;
-    // padding: 0 20px;
   }
 
   .photos__item:last-child {
@@ -32,7 +24,6 @@
   .photos {
     display: flex;
     flex-wrap: wrap;
-    // flex-basis: 768px;
   }
 }
 

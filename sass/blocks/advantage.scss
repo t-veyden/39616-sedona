@@ -25,9 +25,7 @@
 
 .advantage__title {
   display: flex;
-  // display: inline-flex;
   flex-direction: column;
-  // flex-basis: 20px;
   margin-top: 56px;
   margin-bottom: 0;
   &:not(.advantage__title--list)::after {
@@ -122,7 +120,7 @@
     left: -50px;
     width: 39px;
     height: 37px;
-    background: url("../img/icon-house.svg") no-repeat;
+    background: url("../img/icon-house.svg") no-repeat center;
     background-size: cover;
   }
   &--souvenir::before {
@@ -130,7 +128,7 @@
     left: -46px;
     width: 32px;
     height: 38px;
-    background: url("../img/icon-gift.svg") no-repeat;
+    background: url("../img/icon-gift.svg") no-repeat center;
     background-size: cover;
   }
   &--food::before {
@@ -138,7 +136,7 @@
     left: -52px;
     width: 40px;
     height: 35px;
-    background: url("../img/icon-burger.svg") no-repeat;
+    background: url("../img/icon-burger.svg") no-repeat center;
     background-size: cover;
   }
 }
@@ -170,10 +168,8 @@
   }
 
   .advantage__wrapper {
-    // width: 33.3%;
     width: 33%;
     flex-grow: 1;
-    // width: 256px;
     &--triangle::before {
       display: none;
     }

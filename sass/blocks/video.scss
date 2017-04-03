@@ -24,19 +24,13 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  // width: 320px; //flex-basis?
-  // height: 201px;
-
 }
 
 .video__video-player {
   background: url("../img/video-mobile@1x.jpg") no-repeat center;
   background-size: cover;
-}
-
-@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .video__video-player {
-    background: #eee url("../img/video-mobile@2x.jpg") no-repeat center;
+  @media ($retina) {
+    background: $photo-colour url("../img/video-mobile@2x.jpg") no-repeat center;
   }
 }
 
@@ -137,11 +131,8 @@
   .video__video-player {
     margin: 0 auto;
     background: url("../img/video-tablet@1x.jpg") no-repeat center;
-  }
-
-  @media ($retina) {
-    .video__video-player {
-      background: #eee url("../img/video-tablet@2x.jpg") no-repeat center;
+    @media ($retina) {
+        background: $photo-colour url("../img/video-tablet@2x.jpg") no-repeat center;
     }
   }
 
@@ -161,11 +152,8 @@
   }
 
   .video__progress-bar {
-    // bottom: 19px;
-    // bottom: 66px;
     bottom: 0;
     left: 0;
-    // align-self: center;
     width: 648px;
     height: 93px;
     opacity: 0.6;
@@ -192,15 +180,10 @@
   }
 
   .video__controls {
-    // position: relative;
     position: absolute;
-    // bottom: 11px;
     bottom: -9px;
     align-items: flex-start;
-    // align-self: center;
-    // width: 648px;
     width: 654px;
-    // padding: 0 41px 0 35px;
     padding: 0 40px 0 28px;
     margin: 0;
     background-color: transparent;
@@ -211,16 +194,8 @@
   }
 
   .video__btn {
-    &--repeat {
-      // background: url("../img/icon-video-replay-white.svg") no-repeat center;
-    }
     &--subtitles {
-      // margin-left: 20px;
       margin-right: 20px;
-      // background: url("../img/icon-video-subtitles-white.svg") no-repeat center;
-    }
-    &--expand{
-      // background: url("../img/icon-video-fullscreen-white.svg") no-repeat center;
     }
   }
 }
@@ -235,7 +210,6 @@
   }
 
   .video__description {
-    // padding: 0 300px;
     padding: 0 240px;
     margin-bottom: 69px;
   }
@@ -245,17 +219,13 @@
     height: 500px;
     margin-top: 0;
     background: url("../img/video-desktop@1x.jpg") no-repeat center;
-  }
-
-  @media ($retina) {
-    .video__video-player {
-      background: #eee url("../img/video-desktop@2x.jpg") no-repeat center;
+    @media ($retina) {
+        background: $photo-colour url("../img/video-desktop@2x.jpg") no-repeat center;
     }
   }
 
   .video__progress-bar {
     width: 800px;
-    // bottom: 65px;
     bottom: -2px;
     left: 80px;
   }
@@ -277,7 +247,6 @@
   }
 
   .video__controls {
-    // bottom: 58px;
     bottom: -8px;
     left: 80px;
     width: 800px;

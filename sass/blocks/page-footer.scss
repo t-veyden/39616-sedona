@@ -69,9 +69,9 @@
 
   .page-footer__hash-tag {
     margin-top: 40px;
-  }
-  &--main {
-    margin-top: 10px;
+    &--main {
+      margin-top: 10px;
+    }
   }
 
   .page-footer__copyright {
@@ -96,7 +96,7 @@
     padding: 70px 44px 12px 133px;
     margin-top: 0;
     &--main {
-      padding-top: 3px;
+      padding-top: 7px;
     }
     &--photo {
       padding-top: 22px;
@@ -106,6 +106,10 @@
       width: 960px;
       padding: 69px 0 23px 0;
     }
+  }
+
+  .page-footer__hash-tag--main {
+    padding-top: 25px;
   }
 
   .page-footer__copyright-link {
